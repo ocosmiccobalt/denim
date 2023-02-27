@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim online store — Catalog</title>
+    <meta name="description" content="Nimes, your denim online store. Check our catalog">
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a class="page-header__logo" href="index.html" lang="fr">Nîmes</a>
+        <nav class="page-header__nav main-nav" aria-label="Primary">
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Меню" aria-controls="site-list" aria-expanded="false"></button>
+          <ul class="main-nav__list main-nav__list--adaptive main-nav__list--nojs" id="site-list" role="list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#woman-page-content">Woman</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#man-page-content">Man</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">New</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__user-tools">
+          <form class="search" action="#" method="get" role="search">
+            <label class="search__label" for="search-field">
+              <span class="visually-hidden">Search Denim</span>
+            </label>
+            <input class="search__input" type="search" name="q" id="search-field" value="" placeholder="Search">
+            <button class="search__button" type="submit" aria-label="Search">
+              <svg class="search__icon" width="18" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+
+          <!--
+            Replace with this:
+            <button class="show-dialog-button show-dialog-button--cart" type="button" data-a11y-dialog-show="cart-dialog">
+              ...
+            </button>
+          -->
+          <a class="show-dialog-button show-dialog-button--cart" href="#cart-page-content" data-a11y-dialog-show="cart-dialog">
+            <span class="visually-hidden">Open the cart</span>
+            <span class="button__amount">
+              <span class="visually-hidden">Amount of items:</span>
+              <span class="button__number">2</span>
+            </span>
+            <svg class="button__icon button__icon--cart" width="20" height="18" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="about-catalog">
+        <div class="about-catalog__wrapper wrapper">
+          <div class="about-catalog__inner about-catalog__inner--text">
+            <h1 class="page-title">Denim Collection Fall&nbsp;2023</h1>
+            <ul class="breadcrumbs" role="list">
+              <li class="breadcrumbs__item breadcrumbs__item--all">
+                <a class="breadcrumbs__link" href="#">
+                  All categories <span class="breadcrumbs__slash">/</span>
+                </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#woman-page-content">
+                  Woman <span class="breadcrumbs__slash">/</span>
+                </a>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--current">Jackets</li>
+            </ul>
+          </div>
+          <div class="about-catalog__inner about-catalog__inner--image">
+            <p class="about-catalog__illustration">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/catalog-lettering-desktop.avif">
+                <source type="image/avif" srcset="img/catalog-lettering-tablet.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/catalog-lettering-desktop.webp">
+                <source type="image/webp" srcset="img/catalog-lettering-tablet.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/catalog-lettering-desktop.jpg">
+                <img class="about-catalog__image" src="img/catalog-lettering-tablet.jpg" alt="The words written on the denim: 'We see what we want'.">
+              </picture>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <section class="filter">
+          <h2 class="visually-hidden">Filters</h2>
+          <details class="details-dropdown details-dropdown--nojs">
+            <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
+
+            <form class="details-dropdown__content filter__form" action="#" method="get" aria-labelledby="filter-form-title">
+              <div class="filter__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
+                <h3 class="accordion__title">Price</h3>
+                <div class="accordion__panel" id="acc1-pane1">
+                  <fieldset class="filter__group filter__group--price">
+                    <div class="range range--nojs" style="--a: 40; --b: 240; --min: 0; --max: 300">
+                      <label class="visually-hidden" for="a">Denim Minimum Price:</label>
+                      <input class="range__input" type="range" name="min-price" id="a" min="0" value="40" max="300">
+                      <output class="range__output" for="a" hidden></output>
+
+                      <label class="visually-hidden" for="b">Denim Maximum Price:</label>
+                      <input class="range__input" type="range" name="max-price" id="b" min="0" value="240" max="300">
+                      <output class="range__output" for="b" hidden></output>
+                    </div>
+                  </fieldset>
+                </div>
+                <h3 class="accordion__title">Color</h3>
+                <div class="accordion__panel" id="acc1-pane2">
+                  <fieldset class="filter__group filter__group--color">
+                    <ul class="filter__list" role="list">
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray" checked>
+                        <label class="checkbox__label checkbox__label--bg" for="blue-gray">
+                          <span class="visually-hidden">blue gray</span>
+                        </label>
+                      </li>
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy">
+                        <label class="checkbox__label checkbox__label--bg" for="navy">
+                          <span class="visually-hidden">navy</span>
+                        </label>
+                      </li>
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray">
+                        <label class="checkbox__label checkbox__label--bg" for="gray">
+                          <span class="visually-hidden">gray</span>
+                        </label>
+                      </li>
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="coal" id="coal">
+                        <label class="checkbox__label checkbox__label--bg" for="coal">
+                          <span class="visually-hidden">coal</span>
+                        </label>
+                      </li>
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray">
+                        <label class="checkbox__label checkbox__label--bg" for="light-gray">
+                          <span class="visually-hidden">light gray</span>
+                        </label>
+                      </li>
+                      <li class="filter__item checkbox">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue">
+                        <label class="checkbox__label checkbox__label--bg" for="blue">
+                          <span class="visually-hidden">blue</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+                <h3 class="accordion__title">Collection</h3>
+                <div class="accordion__panel" id="acc1-pane3">
+                  <fieldset class="filter__group filter__group--collection">
+                    <ul class="filter__list" role="list">
+                      <li class="filter__item radio">
+                        <input class="radio__input visually-hidden" type="radio" name="collection" id="casual" value="casual">
+                        <label class="radio__label radio__label--filter radio__label--text" for="casual">Casual</label>
+                      </li>
+                      <li class="filter__item radio">
+                        <input class="radio__input visually-hidden" type="radio" name="collection" id="petite" value="petite">
+                        <label class="radio__label radio__label--filter radio__label--text" for="petite">Petite</label>
+                      </li>
+                      <li class="filter__item radio">
+                        <input class="radio__input visually-hidden" type="radio" name="collection" id="classic" value="classic" checked>
+                        <label class="radio__label radio__label--filter radio__label--text" for="classic">Classic</label>
+                      </li>
+                      <li class="filter__item radio">
+                        <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe" value="soulluxe">
+                        <label class="radio__label radio__label--filter radio__label--text" for="soulluxe">Soulluxe</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+              </div>
+              <button class="filter__submit button" type="submit">Apply (9 products)</button>
+              <button class="filter__reset" type="reset">Clear all</button>
+              <button class="filter__close details-dropdown__close" type="button">Close</button>
+            </form>
+          </details>
+        </section>
+
+        <section class="products products--catalog">
+          <h2 class="visually-hidden">Catalog</h2>
+          <ul class="products__list products__list--catalog" role="list">
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 40</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-1-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-1-tablet.avif">
+                    <source type="image/avif" srcset="img/item-1-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-1-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-1-tablet.webp">
+                    <source type="image/webp" srcset="img/item-1-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-1-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-1-tablet.jpg">
+                    <img class="card__image" src="img/item-1-mobile.jpg" alt="Jacket, $ 40.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 70</p>
+                <p class="card__illustration  card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-2-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-2-tablet.avif">
+                    <source type="image/avif" srcset="img/item-2-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-2-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-2-tablet.webp">
+                    <source type="image/webp" srcset="img/item-2-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-2-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-2-tablet.jpg">
+                    <img class="card__image" src="img/item-2-mobile.jpg" alt="Jacket, $ 70.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 60</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-3-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-3-tablet.avif">
+                    <source type="image/avif" srcset="img/item-3-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-3-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-3-tablet.webp">
+                    <source type="image/webp" srcset="img/item-3-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-3-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-3-tablet.jpg">
+                    <img class="card__image" src="img/item-3-mobile.jpg" alt="Jacket, $ 60.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 50</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-4-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-4-tablet.avif">
+                    <source type="image/avif" srcset="img/item-4-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-4-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-4-tablet.webp">
+                    <source type="image/webp" srcset="img/item-4-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-4-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-4-tablet.jpg">
+                    <img class="card__image" src="img/item-4-mobile.jpg" alt="Jacket, $ 50.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog products__item--large">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 160</p>
+                <p class="card__illustration card__illustration--large">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-5-large-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-5-large-tablet.avif">
+                    <source type="image/avif" srcset="img/item-5-large-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-5-large-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-5-large-tablet.webp">
+                    <source type="image/webp" srcset="img/item-5-large-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-5-large-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-5-large-tablet.jpg">
+                    <img class="card__image" src="img/item-5-large-mobile.jpg" alt="Jacket, $ 160.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 40</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-6-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-6-tablet.avif">
+                    <source type="image/avif" srcset="img/item-6-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-6-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-6-tablet.webp">
+                    <source type="image/webp" srcset="img/item-6-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-6-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-6-tablet.jpg">
+                    <img class="card__image" src="img/item-6-mobile.jpg" alt="Jacket, $ 40.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 110</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-7-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-7-tablet.avif">
+                    <source type="image/avif" srcset="img/item-7-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-7-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-7-tablet.webp">
+                    <source type="image/webp" srcset="img/item-7-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-7-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-7-tablet.jpg">
+                    <img class="card__image" src="img/item-7-mobile.jpg" alt="Jacket, $ 110.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 35</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-8-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-8-tablet.avif">
+                    <source type="image/avif" srcset="img/item-8-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-8-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-8-tablet.webp">
+                    <source type="image/webp" srcset="img/item-8-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-8-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-8-tablet.jpg">
+                    <img class="card__image" src="img/item-8-mobile.jpg" alt="Jacket, $ 35.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+            <li class="products__item products__item--catalog">
+              <article class="card">
+                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+                <p class="card__price">$ 85</p>
+                <p class="card__illustration card__illustration--catalog">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-9-desktop.avif">
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-9-tablet.avif">
+                    <source type="image/avif" srcset="img/item-9-mobile.avif">
+
+                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-9-desktop.webp">
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-9-tablet.webp">
+                    <source type="image/webp" srcset="img/item-9-mobile.webp">
+
+                    <source media="(min-width: 75rem)" srcset="img/item-9-desktop.jpg">
+                    <source media="(min-width: 48rem)" srcset="img/item-9-tablet.jpg">
+                    <img class="card__image" src="img/item-9-mobile.jpg" alt="Jacket, $ 85.">
+                  </picture>
+                </p>
+              </article>
+            </li>
+          </ul>
+          <div class="products__showing showing">
+            <p class="showing__count">
+              Showing <span class="showing__shown">9</span> of <span class="showing__total">45</span> items
+            </p>
+            <button class="showing__button button" type="button">Load more</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a class="page-footer__logo" href="index.html" lang="fr">Nîmes</a>
+        <nav class="page-footer__nav aux-nav" aria-label="More On This Site">
+          <ul class="aux-nav__list" role="list">
+            <li class="aux-nav__item aux-nav__item--shop">
+              <a class="aux-nav__link" href="#shop-page-content">Shop</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--delivery">
+              <a class="aux-nav__link" href="#delivery-page-content">Delivery</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--service">
+              <a class="aux-nav__link" href="#service-page-content">Service</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--sitemap">
+              <a class="aux-nav__link" href="#sitemap-page-content">Sitemap</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--contacts">
+              <a class="aux-nav__link" href="#contacts-page-content">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="page-footer__socials socials" role="list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" rel="noopener noreferrer" href="https://www.facebook.com" target="_blank">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="socials__icon socials__icon--facebook" width="11" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.instagram.com" target="_blank">
+              <span class="visually-hidden">Instagram</span>
+              <svg class="socials__icon socials__icon--instagram" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.pinterest.com" target="_blank">
+              <span class="visually-hidden">Pinterest</span>
+              <svg class="socials__icon socials__icon--pinterest" width="21" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://twitter.com" target="_blank">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="socials__icon socials__icon--twitter" width="22" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

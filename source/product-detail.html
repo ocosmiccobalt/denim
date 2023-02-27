@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim online store — Overalls</title>
+    <meta name="description" content="Nimes, your denim online store: Overalls">
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a class="page-header__logo" href="index.html" lang="fr">Nîmes</a>
+        <nav class="page-header__nav main-nav" aria-label="Primary">
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Меню" aria-controls="site-list" aria-expanded="false"></button>
+          <ul class="main-nav__list main-nav__list--adaptive main-nav__list--nojs" id="site-list" role="list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html#woman-page-content">Woman</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html#man-page-content">Man</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">New</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__user-tools">
+          <form class="search" action="#" method="get" role="search">
+            <label class="search__label" for="search-field">
+              <span class="visually-hidden">Search Denim</span>
+            </label>
+            <input class="search__input" type="search" name="q" id="search-field" value="" placeholder="Search">
+            <button class="search__button" type="submit" aria-label="Search">
+              <svg class="search__icon" width="18" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+
+          <!--
+            Replace with this:
+            <button class="show-dialog-button show-dialog-button--cart" type="button" data-a11y-dialog-show="cart-dialog">
+              ...
+            </button>
+          -->
+          <a class="show-dialog-button show-dialog-button--cart" href="#cart-page-content" data-a11y-dialog-show="cart-dialog">
+            <span class="visually-hidden">Open the cart</span>
+            <span class="button__amount">
+              <span class="visually-hidden">Amount of items:</span>
+              <span class="button__number">2</span>
+            </span>
+            <svg class="button__icon button__icon--cart" width="20" height="18" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main product wrapper">
+      <div class="product__spec">
+        <h1 class="product__title">Overalls</h1>
+        <p class="product__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.</p>
+
+        <section class="product__choice">
+          <h2 class="visually-hidden" id="product-form-label">Choose color and size</h2>
+          <form class="product__form product-form" action="#" method="post" aria-labelledby="product-form-label">
+            <fieldset class="product-form__group">
+              <legend class="product-form__subtitle">Color</legend>
+              <ul class="product-form__list" role="list">
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="color" id="blue-gray-to-cart" value="blue-gray" checked>
+                  <label class="radio__label radio__label--card radio__label--bg" for="blue-gray-to-cart">
+                    <span class="visually-hidden">Blue gray</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="color" id="navy-to-cart" value="navy">
+                  <label class="radio__label radio__label--card radio__label--bg" for="navy-to-cart">
+                    <span class="visually-hidden">Navy</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="color" id="gray-to-cart" value="gray">
+                  <label class="radio__label radio__label--card radio__label--bg" for="gray-to-cart">
+                    <span class="visually-hidden">Gray</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="product-form__group">
+              <legend class="product-form__subtitle">Size</legend>
+              <ul class="product-form__list" role="list">
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="size" id="XS" value="XS">
+                  <label class="radio__label radio__label--card radio__label--text" for="XS">
+                    <span class="visually-hidden">XS</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="size" id="S" value="S" checked>
+                  <label class="radio__label radio__label--card radio__label--text" for="S">
+                    <span class="visually-hidden">S</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="size" id="M" value="M">
+                  <label class="radio__label radio__label--card radio__label--text" for="M">
+                    <span class="visually-hidden">M</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="size" id="L" value="L">
+                  <label class="radio__label radio__label--card radio__label--text" for="L">
+                    <span class="visually-hidden">L</span>
+                  </label>
+                </li>
+                <li class="product-form__item radio">
+                  <input class="radio__input visually-hidden" type="radio" name="size" id="XL" value="XL">
+                  <label class="radio__label radio__label--card radio__label--text" for="XL">
+                    <span class="visually-hidden">XL</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <p class="product-form__price">$ 160</p>
+            <button class="product-form__submit button" type="submit">Add to cart</button>
+          </form>
+        </section>
+      </div>
+
+      <section class="product__carousel carousel">
+        <h2 class="visually-hidden">Photo gallery</h2>
+        <div class="carousel__inner">
+          <ul class="carousel__slides" role="list">
+            <li class="carousel__item">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/product-detail-1-desktop.avif">
+                <source type="image/avif" media="(min-width: 48rem)" srcset="img/product-detail-1-tablet.avif">
+                <source type="image/avif" srcset="img/product-detail-1-mobile.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/product-detail-1-desktop.webp">
+                <source type="image/webp" media="(min-width: 48rem)" srcset="img/product-detail-1-tablet.webp">
+                <source type="image/webp" srcset="img/product-detail-1-mobile.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/product-detail-1-desktop.jpg">
+                <source media="(min-width: 48rem)" srcset="img/product-detail-1-tablet.jpg">
+                <img class="carousel__image" src="img/product-detail-1-mobile.jpg" alt="Overalls, $ 160, photo 1.">
+              </picture>
+            </li>
+            <li class="carousel__item">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/product-detail-small-2-desktop.avif">
+                <source type="image/avif" srcset="img/product-detail-small-2-tablet.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/product-detail-small-2-desktop.webp">
+                <source type="image/webp" srcset="img/product-detail-small-2-tablet.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/product-detail-small-2-desktop.jpg">
+                <img class="carousel__image" src="img/product-detail-small-2-tablet.jpg" alt="Overalls, $ 160, photo 2.">
+              </picture>
+            </li>
+            <li class="carousel__item">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/product-detail-small-3-desktop.avif">
+                <source type="image/avif" srcset="img/product-detail-small-3-tablet.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/product-detail-small-3-desktop.webp">
+                <source type="image/webp" srcset="img/product-detail-small-3-tablet.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/product-detail-small-3-desktop.jpg">
+                <img class="carousel__image" src="img/product-detail-small-3-tablet.jpg" alt="Overalls, $ 160, photo 3.">
+              </picture>
+            </li>
+            <li class="carousel__item">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/product-detail-small-4-desktop.avif">
+                <source type="image/avif" srcset="img/product-detail-small-4-tablet.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/product-detail-small-4-desktop.webp">
+                <source type="image/webp" srcset="img/product-detail-small-4-tablet.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/product-detail-small-4-desktop.jpg">
+                <img class="carousel__image" src="img/product-detail-small-4-tablet.jpg" alt="Overalls, $ 160, photo 4.">
+              </picture>
+            </li>
+            <li class="carousel__item">
+              <picture>
+                <source type="image/avif" media="(min-width: 75rem)" srcset="img/product-detail-small-5-desktop.avif">
+                <source type="image/avif" srcset="img/product-detail-small-5-tablet.avif">
+
+                <source type="image/webp" media="(min-width: 75rem)" srcset="img/product-detail-small-5-desktop.webp">
+                <source type="image/webp" srcset="img/product-detail-small-5-tablet.webp">
+
+                <source media="(min-width: 75rem)" srcset="img/product-detail-small-5-desktop.jpg">
+                <img class="carousel__image" src="img/product-detail-small-5-tablet.jpg" alt="Overalls, $ 160, photo 5.">
+              </picture>
+            </li>
+          </ul>
+        </div>
+        <ul class="carousel__previews" role="list">
+          <li>
+            <button class="carousel__preview" type="button">
+              <span class="visually-hidden">Photo 2</span>
+            </button>
+          </li>
+          <li>
+            <button class="carousel__preview" type="button">
+              <span class="visually-hidden">Photo 3</span>
+            </button>
+          </li>
+          <li>
+            <button class="carousel__preview" type="button">
+              <span class="visually-hidden">Photo 4</span>
+            </button>
+          </li>
+          <li>
+            <button class="carousel__preview" type="button">
+              <span class="visually-hidden">Photo 5</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="carousel__buttons" role="list">
+          <li>
+            <button class="carousel__button carousel__button--prev" type="button">
+              <span class="visually-hidden">Previous photo</span>
+            </button>
+          </li>
+          <li>
+            <button class="carousel__button carousel__button--next" type="button">
+              <span class="visually-hidden">Next photo</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product__also-like products">
+        <h2 class="products__title">You may also like</h2>
+        <ul class="products__list" role="list">
+          <li class="products__item">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Overalls</a></h3>
+              <p class="card__price">$ 140</p>
+              <p class="card__illustration">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/bestsellers-2-desktop.avif">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/bestsellers-2-tablet.avif">
+                  <source type="image/avif" srcset="img/bestsellers-2-mobile.avif">
+
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/bestsellers-2-desktop.webp">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/bestsellers-2-tablet.webp">
+                  <source type="image/webp" srcset="img/bestsellers-2-mobile.webp">
+
+                  <source media="(min-width: 75rem)" srcset="img/bestsellers-2-desktop.jpg">
+                  <source media="(min-width: 48rem)" srcset="img/bestsellers-2-tablet.jpg">
+                  <img class="card__image" src="img/bestsellers-2-mobile.jpg" alt="Overalls, $ 140.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Overalls</a></h3>
+              <p class="card__price">$ 110</p>
+              <p class="card__illustration">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-10-desktop.avif">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-10-tablet.avif">
+                  <source type="image/avif" srcset="img/item-10-mobile.avif">
+
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-10-desktop.webp">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-10-tablet.webp">
+                  <source type="image/webp" srcset="img/item-10-mobile.webp">
+
+                  <source media="(min-width: 75rem)" srcset="img/item-10-desktop.jpg">
+                  <source media="(min-width: 48rem)" srcset="img/item-10-tablet.jpg">
+                  <img class="card__image" src="img/item-10-mobile.jpg" alt="Overalls, $ 110.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 70</p>
+              <p class="card__illustration">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-11-desktop.avif">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-11-tablet.avif">
+                  <source type="image/avif" srcset="img/item-2-mobile.avif">
+
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-11-desktop.webp">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-11-tablet.webp">
+                  <source type="image/webp" srcset="img/item-2-mobile.webp">
+
+                  <source media="(min-width: 75rem)" srcset="img/item-11-desktop.jpg">
+                  <source media="(min-width: 48rem)" srcset="img/item-11-tablet.jpg">
+                  <img class="card__image" src="img/item-2-mobile.jpg" alt="Jacket, $ 70.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 60</p>
+              <p class="card__illustration">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-12-desktop.avif">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-12-tablet.avif">
+                  <source type="image/avif" srcset="img/item-3-mobile.avif">
+
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-12-desktop.webp">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-12-tablet.webp">
+                  <source type="image/webp" srcset="img/item-3-mobile.webp">
+
+                  <source media="(min-width: 75rem)" srcset="img/item-12-desktop.jpg">
+                  <source media="(min-width: 48rem)" srcset="img/item-12-tablet.jpg">
+                  <img class="card__image" src="img/item-3-mobile.jpg" alt="Jacket, $ 60.">
+                </picture>
+              </p>
+            </article>
+          </li>
+        </ul>
+        <div class="products__view-all">
+          <a class="products__link" href="#all-products-page-content">View all</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a class="page-footer__logo" href="index.html" lang="fr">Nîmes</a>
+        <nav class="page-footer__nav aux-nav" aria-label="More On This Site">
+          <ul class="aux-nav__list" role="list">
+            <li class="aux-nav__item aux-nav__item--shop">
+              <a class="aux-nav__link" href="#shop-page-content">Shop</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--delivery">
+              <a class="aux-nav__link" href="#delivery-page-content">Delivery</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--service">
+              <a class="aux-nav__link" href="#service-page-content">Service</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--sitemap">
+              <a class="aux-nav__link" href="#sitemap-page-content">Sitemap</a>
+            </li>
+            <li class="aux-nav__item aux-nav__item--contacts">
+              <a class="aux-nav__link" href="#contacts-page-content">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="page-footer__socials socials" role="list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" rel="noopener noreferrer" href="https://www.facebook.com" target="_blank">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="socials__icon socials__icon--facebook" width="11" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.instagram.com" target="_blank">
+              <span class="visually-hidden">Instagram</span>
+              <svg class="socials__icon socials__icon--instagram" width="20" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.pinterest.com" target="_blank">
+              <span class="visually-hidden">Pinterest</span>
+              <svg class="socials__icon socials__icon--pinterest" width="21" height="20" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://twitter.com" target="_blank">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="socials__icon socials__icon--twitter" width="22" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
