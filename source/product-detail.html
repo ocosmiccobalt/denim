@@ -386,5 +386,50 @@
         </ul>
       </div>
     </footer>
+
+    !-- The dialog container -->
+    <div
+      class="dialog dialog--cart"
+      id="cart-dialog"
+      aria-labelledby="cart-title"
+      aria-hidden="true"
+    >
+      <!-- The dialog overlay -->
+      <div class="dialog__overlay" data-a11y-dialog-hide></div>
+      <!-- The actual dialog -->
+      <div class="dialog__content cart" role="document">
+        <!-- The close button -->
+        <button class="dialog__close" type="button" data-a11y-dialog-hide aria-label="Close the cart">
+          &times;
+        </button>
+        <!-- The dialog title -->
+        <h1 class="dialog__title" id="cart-title">Your cart</h1>
+        <!-- Dialog content -->
+        <div class="cart__inner">
+          <ul class="cart__list" role="list">
+            <li class="cart__item">
+              <h2 class="cart__name">Jacket</h2>
+              <p class="cart__price">$ 90</p>
+              <p class="cart__amount">1</p>
+              <div class="cart__actions">
+                <button class="cart__button cart__button--minus" type="button" aria-label="Minus one">-</button>
+                <button class="cart__button cart__button--plus" type="button" aria-label="Plus one">+</button>
+              </div>
+            </li>
+            <li class="cart__item">
+              <h2 class="cart__name">Overalls/h2>
+              <p class="cart__price">$ 140</p>
+              <p class="cart__amount">1</p>
+              <div class="cart__actions">
+                <button class="cart__button cart__button--minus" type="button" aria-label="Minus one">-</button>
+                <button class="cart__button cart__button--plus" type="button" aria-label="Plus one">+</button>
+              </div>
+            </li>
+          </ul>
+          <p class="cart__summary">Total: <span class="cart__total">$ 230</span></p>
+          <button class="cart__order" type="button">Order</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
