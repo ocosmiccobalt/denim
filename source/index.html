@@ -15,16 +15,16 @@
     <header class="page-header page-header--index">
       <div class="page-header__wrapper page-header__wrapper--index wrapper">
         <a class="page-header__logo page-header__logo--index" lang="fr">Nîmes</a>
-        <nav class="page-header__nav main-nav main-nav--index" aria-label="Primary">
-          <ul class="main-nav__list" role="list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html#woman-page-content">Woman</a>
+        <nav class="page-header__nav page-header__nav--index" aria-label="Primary">
+          <ul class="site-list" role="list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html#woman-page-content">Woman</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html#man-page-content">Man</a>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html#man-page-content">Man</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">New</a>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">New</a>
             </li>
           </ul>
         </nav>
@@ -43,17 +43,17 @@
 
           <!--
             Replace with this:
-            <button class="show-dialog-button show-dialog-button--cart" type="button" data-a11y-dialog-show="cart-dialog">
+            <button class="show-cart-button" type="button" data-a11y-dialog-show="cart-dialog">
               ...
             </button>
           -->
-          <a class="show-dialog-button show-dialog-button--cart" href="#cart-page-content" data-a11y-dialog-show="cart-dialog">
+          <a class="show-cart-button" href="#cart-page-content" data-a11y-dialog-show="cart-dialog">
             <span class="visually-hidden">Open the cart</span>
-            <span class="button__amount">
+            <span class="show-cart-button__amount">
               <span class="visually-hidden">Amount of items:</span>
-              <span class="button__number">2</span>
+              <span class="show-cart-button__number">2</span>
             </span>
-            <svg class="button__icon button__icon--cart" width="20" height="18" aria-hidden="true" focusable="false">
+            <svg class="show-cart-button__icon" width="20" height="18" aria-hidden="true" focusable="false">
               <use xlink:href="#icon-cart"></use>
             </svg>
           </a>
