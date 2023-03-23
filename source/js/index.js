@@ -1,12 +1,18 @@
 import Nav from './nav.js';
+import Search from './search.js';
+
+const init = (Component, elemSelector, ...rest) => {
+  const elem = document.querySelector(elemSelector);
+
+  if (elem !== null) {
+    const instance = new Component(elem, ...rest);
+    instance.init();
+  }
+};
 
 const work = () => {
-  const navElem = document.querySelector(`.page-header__nav`);
-
-  if (navElem !== null) {
-    const nav = new Nav(navElem, `toggle-nav-button`, `site-list`);
-    nav.init();
-  }
+  init(Nav, `.page-header__nav`, `toggle-nav-button`, `site-list`);
+  init(Search, `#search-field`, `search--notempty`);
 };
 
 if (document.readyState === `loading`) {
