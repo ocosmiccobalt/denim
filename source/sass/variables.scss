@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* Viewport */
 $tablet-width: 48rem;
 $desktop-width: 75rem;
@@ -20,6 +22,8 @@ $faint-text-color: $dark-gray;
 
 $body-bg-color: $white;
 $alt-bg-color: $light-gray;
+
+$state-color: color.adjust($denim-blue, $lightness: -10%);
 
 /* Fonts */
 $work-sans-400-500-font-family: "Work Sans", "Work Sans fallback", "Verdana", sans-serif;
