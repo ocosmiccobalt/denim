@@ -10,6 +10,8 @@ class Search {
 
   init() {
     if (this.form !== null && this.button !== null) {
+      this.button.setAttribute(`tabindex`, `-1`);
+
       this.field.addEventListener(`focus`, this.onSearchFieldEvent.bind(this));
       this.field.addEventListener(`blur`, this.onSearchFieldEvent.bind(this));
       this.field.addEventListener(`keydown`, this.onSearchFieldEvent.bind(this));
