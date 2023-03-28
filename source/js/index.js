@@ -11,7 +11,7 @@ const init = (Component, elemSelector, ...rest) => {
 };
 
 const work = () => {
-  init(Nav, `.page-header__nav`, `toggle-nav-button`, `site-list`);
+  init(Nav, `.page-header__nav--expandable`, `toggle-nav-button`, `site-list`);
   init(Search, `#search-field`, `search--notempty`);
 };
 
