@@ -1,4 +1,4 @@
-import { checkTab } from './util/checkKey.js';
+import { checkTab } from '../util/checkKey.js';
 
 class Search {
   constructor(searchInputElem, notEmptyClass) {

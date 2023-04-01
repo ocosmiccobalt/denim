@@ -1,5 +1,5 @@
-import Nav from './nav.js';
-import Search from './search.js';
+import Nav from './components/nav.js';
+import Search from './components/search.js';
 import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 
 const init = (Component, elemSelector, ...rest) => {
