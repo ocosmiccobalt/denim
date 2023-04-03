@@ -1,0 +1,103 @@
+@use "variables" as *;
+
+.toggle-nav-button {
+  position: absolute;
+
+  display: none;
+  width: 3.125em;
+  height: 4em;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0.2em;
+
+  cursor: pointer;
+  transition: outline 220ms ease-in-out, outline-offset 220ms ease-in-out;
+
+  &:focus {
+    outline: 0.125em solid $state-color;
+    outline-offset: -0.125em;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.125em solid $state-color;
+    outline-offset: -0.125em;
+  }
+}
+
+.toggle-nav-button--closed {
+  display: block;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 1.875em;
+    left: 0;
+    right: 0;
+
+    width: 1.25em;
+    height: 0.125em;
+    margin: 0 auto;
+
+    background-color: $heavy-text-color;
+    box-shadow: 0 0.25em 0 0 $heavy-text-color, 0 0.5em 0 0 $heavy-text-color;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    background-color: $state-color;
+    box-shadow: 0 0.25em 0 0 $state-color, 0 0.5em 0 0 $state-color;
+  }
+}
+
+.toggle-nav-button--open {
+  display: block;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+
+    width: 0.125em;
+    height: 1.875em;
+    margin: 0;
+
+    background-color: $heavy-text-color;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before,
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    background-color: $state-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .toggle-nav-button--closed,
+  .toggle-nav-button--open {
+    display: none;
+  }
+}
