@@ -8,10 +8,10 @@
   display: inline-flex;
   align-items: flex-start;
 
-  width: 46px;
-  height: 64px;
-  padding: 24px 13px;
-  padding-right: 15px;
+  width: 2.875em;
+  height: 4em;
+  padding: 1.5em 0.813em;
+  padding-right: 0.938em;
 
   font-weight: 700;
   line-height: 1.125;
@@ -51,34 +51,43 @@
   flex-basis: auto;
 
   display: block;
-  width: 18px;
-  height: 16px;
+  width: 1.125em;
+  height: 1em;
 
   stroke: currentColor;
 }
 
-.show-cart-button__number {
+.show-cart-button__amount {
   position: absolute;
   top: 0;
   right: 0;
 
-  display: none;
-  padding: 4px;
+  display: inline-block;
+  padding: 0.125em 0.188em;
 
+  vertical-align: top;
   color: $body-bg-color;
 
   background-color: $state-color;
-  border-radius: 1em;
+  border-radius: 0.2em;
 }
 
 @media (min-width: $tablet-width) {
   .show-cart-button {
-    width: 56px;
-    padding: 23px 18px;
+    width: 3.5em;
+    padding: 1.438em 1.125em;
   }
 
   .show-cart-button__icon {
-    width: 20px;
-    height: 18px;
+    width: 1.25em;
+    height: 1.125em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .show-cart-button--index {
+    height: 3.25em;
+    padding-top: 1.063em;
+    padding-bottom: 1.063em;
   }
 }
