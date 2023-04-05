@@ -25,18 +25,18 @@ class Search {
     this.form.classList.add(this.notEmptyClass);
     this.button.setAttribute(`tabindex`, `0`);
 
-    if (value !== ``) {
-      this.form.classList.add(this.notEmptyClass);
-    } else {
-      if (eventType === `blur`) {
-        this.button.setAttribute(`tabindex`, `-1`);
-        this.form.classList.remove(this.notEmptyClass);
-      }
-
-      if (eventType === `keydown`) {
-        if (checkTab(evt)) {
+    if (value === ``) {
+      switch (eventType) {
+        case `blur`:
           this.button.setAttribute(`tabindex`, `-1`);
-        }
+          this.form.classList.remove(this.notEmptyClass);
+          break;
+
+        case `keydown`:
+          if (checkTab(evt)) {
+            this.button.setAttribute(`tabindex`, `-1`);
+          }
+          break;
       }
     }
   }
