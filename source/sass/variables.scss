@@ -24,6 +24,7 @@ $body-bg-color: $white;
 $alt-bg-color: $light-gray;
 
 $state-color: color.adjust($denim-blue, $lightness: -10%);
+$stripes-color: color.adjust($heavy-text-color, $alpha: -0.3);
 
 /* Fonts */
 $work-sans-400-500-font-family: "Work Sans", "Work Sans fallback", "Verdana", sans-serif;
