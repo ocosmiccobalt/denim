@@ -13,7 +13,7 @@ const init = (Component, elemSelector, ...rest) => {
 
 const work = () => {
   init(Nav, `.page-header__nav[data-expandable]`, `toggle-nav-button`, `site-list`);
-  init(Search, `#search-field`, `search--notempty`);
+  init(Search, `#search-field`, `search--notempty`, `search--hasfocus`);
   replaceAnchorsWithButtons(`a[data-a11y-dialog-show]`);
 };
 

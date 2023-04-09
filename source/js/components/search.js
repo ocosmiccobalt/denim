@@ -1,11 +1,12 @@
 import { checkTab } from '../util/checkKey.js';
 
 class Search {
-  constructor(searchInputElem, notEmptyClass) {
+  constructor(searchInputElem, notEmptyClass, hasFocusClass) {
     this.field = searchInputElem;
     this.form = this.field.form;
     this.button = this.form.querySelector(`button[type=submit]`);
     this.notEmptyClass = notEmptyClass;
+    this.hasFocusClass = hasFocusClass;
   }
 
   init() {
@@ -15,6 +16,8 @@ class Search {
       this.field.addEventListener(`focus`, this.onSearchFieldEvent.bind(this));
       this.field.addEventListener(`blur`, this.onSearchFieldEvent.bind(this));
       this.field.addEventListener(`keydown`, this.onSearchFieldEvent.bind(this));
+      this.form.addEventListener(`focusin`, this.onSearchFormFocus.bind(this));
+      this.form.addEventListener(`focusout`, this.onSearchFormBlur.bind(this));
     }
   }
 
@@ -38,6 +41,18 @@ class Search {
           }
           break;
       }
+    }
+  }
+
+  onSearchFormFocus() {
+    this.form.classList.add(this.hasFocusClass);
+  }
+
+  onSearchFormBlur(evt) {
+    const formContainsFocus = this.form.contains(evt.relatedTarget);
+
+    if (!formContainsFocus) {
+      this.form.classList.remove(this.hasFocusClass);
     }
   }
 }
