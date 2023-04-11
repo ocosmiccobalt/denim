@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin reset-list() {
   padding: 0;
   list-style: none;
@@ -6,4 +8,21 @@
 @mixin break-word() {
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+@mixin title-font() {
+  font-family: $work-sans-700-800-font-family;
+  font-weight: 700;
+  font-size: 1.625em;
+  line-height: 1.154;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.75em;
+    line-height: 1.179;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 2em;
+    line-height: 1.188;
+  }
 }
