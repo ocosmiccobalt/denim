@@ -103,16 +103,20 @@
 
   .collection__inner {
     width: calc(50% - 0.938em);
-    min-height: unset;
-    padding: 1.25em;
-    padding-left: 0;
+    min-height: auto;
+    padding: 0 1em;
+    padding-left: 3.125em;
+
+    border: 1.25em solid transparent;
+    border-left-width: 0;
+    background-clip: padding-box;
 
     aspect-ratio: auto;
   }
 
   .collection__title {
     margin-bottom: 0.969em;
-    padding-left: 1.563em;
+    padding: 0;
 
     font-size: 2em;
     line-height: inherit;
@@ -121,15 +125,14 @@
 
   .collection__description {
     padding-top: 1.889em;
-    padding-left: 2.778em;
+    padding-right: 0;
+    padding-left: 0;
 
     text-align: left;
   }
 
   .collection__button {
     align-self: flex-start;
-
-    margin-left: 3.125em;
   }
 
   .collection__illustration {
@@ -161,23 +164,19 @@
 
   .collection__inner {
     width: 40.17%;
-    padding-top: 1.938em;
-    padding-right: 4.375em;
-    padding-bottom: 1.938em;
+    padding-left: 4.375em;
+
+    border-top-width: 1.938em;
+    border-right-width: 4.375em;
+    border-bottom-width: 1.938em;
   }
 
   .collection__title {
     margin-bottom: 1.25em;
-    padding-left: 2.188em;
   }
 
   .collection__description {
     margin-bottom: 0.5em;
-    padding-left: 3.889em;
-  }
-
-  .collection__button {
-    margin-left: 4.375em;
   }
 
   .collection__illustration {
