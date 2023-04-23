@@ -76,21 +76,12 @@
   .socials {
     justify-content: center;
 
-    padding: 0 0.938em;
-  }
-
-  .socials__item {
-    margin: 0 0.125em;
+    padding: 0.875em 0.938em;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .socials__item {
-    margin: 0;
-  }
-
-  .socials__link {
-    padding-left: 0.938em;
-    padding-right: 0.938em;
+  .socials {
+    padding-top: 0.688em;
   }
 }
