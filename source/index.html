@@ -388,21 +388,21 @@
     <div
       class="dialog dialog--cart"
       id="cart-dialog"
-      aria-labelledby="cart-title"
+      aria-labelledby="cart-dialog-title"
       aria-hidden="true"
     >
       <!-- The dialog overlay -->
       <div class="dialog__overlay" data-a11y-dialog-hide></div>
       <!-- The actual dialog -->
-      <div class="dialog__content cart" role="document">
+      <div class="dialog__window cart" role="document">
         <!-- The close button -->
-        <button class="dialog__close" type="button" data-a11y-dialog-hide aria-label="Close the cart">
+        <button class="cart__hide" type="button" data-a11y-dialog-hide aria-label="Close the cart">
           &times;
         </button>
         <!-- The dialog title -->
-        <h1 class="dialog__title" id="cart-title">Your cart</h1>
+        <h1 class="cart__title" id="cart-dialog-title">Your cart</h1>
         <!-- Dialog content -->
-        <div class="cart__inner">
+        <div class="cart__content">
           <ul class="cart__list" role="list">
             <li class="cart__item">
               <h2 class="cart__name">Jacket</h2>
