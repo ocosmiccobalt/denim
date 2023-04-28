@@ -386,7 +386,7 @@
 
     <!-- The dialog container -->
     <div
-      class="dialog dialog--cart"
+      class="dialog"
       id="cart-dialog"
       aria-labelledby="cart-dialog-title"
       aria-hidden="true"
@@ -396,7 +396,7 @@
       <!-- The actual dialog -->
       <div class="dialog__window cart" role="document">
         <!-- The close button -->
-        <button class="cart__hide" type="button" data-a11y-dialog-hide aria-label="Close the cart">
+        <button class="cart__button cart__button--hide" type="button" data-a11y-dialog-hide aria-label="Close the cart">
           &times;
         </button>
         <!-- The dialog title -->
@@ -409,8 +409,8 @@
               <p class="cart__price">$ 90</p>
               <p class="cart__amount">1</p>
               <div class="cart__actions">
-                <button class="cart__button cart__button--minus" type="button" aria-label="Minus one">-</button>
-                <button class="cart__button cart__button--plus" type="button" aria-label="Plus one">+</button>
+                <button class="cart__button" type="button" aria-label="Minus one">-</button>
+                <button class="cart__button" type="button" aria-label="Plus one">+</button>
               </div>
             </li>
             <li class="cart__item">
@@ -418,13 +418,13 @@
               <p class="cart__price">$ 140</p>
               <p class="cart__amount">1</p>
               <div class="cart__actions">
-                <button class="cart__button cart__button--minus" type="button" aria-label="Minus one">-</button>
-                <button class="cart__button cart__button--plus" type="button" aria-label="Plus one">+</button>
+                <button class="cart__button" type="button" aria-label="Minus one">-</button>
+                <button class="cart__button" type="button" aria-label="Plus one">+</button>
               </div>
             </li>
           </ul>
           <p class="cart__summary">Total: <span class="cart__total">$ 230</span></p>
-          <button class="cart__order" type="button">Order</button>
+          <button class="cart__order button button--order" type="button">Order</button>
         </div>
       </div>
     </div>
