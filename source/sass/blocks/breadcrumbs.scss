@@ -1,0 +1,82 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.breadcrumbs {
+  padding: 0.75em 0.938em;
+}
+
+.breadcrumbs__list {
+  margin: 0;
+
+  @include reset-list();
+}
+
+.breadcrumbs__item {
+  display: inline;
+
+  font-size: 1.125em;
+  color: $faint-text-color;
+
+  &--all {
+    display: none;
+  }
+
+  &--current {
+    color: $heavy-text-color;
+  }
+
+  & + &::before {
+    content: "";
+
+    display: inline-block;
+    height: 0.8em;
+    margin: 0 0.833em;
+    margin-right: 0.722em;
+
+    vertical-align: baseline;
+
+    border: 0.056em solid $faint-text-color;
+
+    transform: rotate(20deg);
+  }
+
+  &--all + &::before {
+    display: none;
+  }
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+
+  &[href] {
+    cursor: pointer;
+    transition: 220ms ease-in-out;
+  }
+
+  &:focus {
+    outline: 0.125em solid $state-color;
+    outline-offset: 0.125em;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.125em solid $state-color;
+    outline-offset: 0.125em;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .breadcrumbs__item {
+    &--all {
+      display: inline;
+    }
+
+    &--all + &::before {
+      display: inline-block;
+    }
+  }
+}
