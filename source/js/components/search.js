@@ -1,12 +1,12 @@
 import { checkTab } from '../util/checkKey.js';
 
 class Search {
-  constructor(searchInputElem, notEmptyClass, hasFocusClass) {
+  constructor(searchInputElem) {
+    this.NOT_EMPTY_CLASS = `search--notempty`;
+    this.HAS_FOCUS_CLASS = `search--hasfocus`;
     this.field = searchInputElem;
     this.form = this.field.form;
     this.button = this.form.querySelector(`button[type=submit]`);
-    this.notEmptyClass = notEmptyClass;
-    this.hasFocusClass = hasFocusClass;
   }
 
   init() {
@@ -25,14 +25,14 @@ class Search {
     const eventType = evt.type;
     const value = evt.target.value.trim();
 
-    this.form.classList.add(this.notEmptyClass);
+    this.form.classList.add(this.NOT_EMPTY_CLASS);
     this.button.setAttribute(`tabindex`, `0`);
 
     if (value === ``) {
       switch (eventType) {
         case `blur`:
           this.button.setAttribute(`tabindex`, `-1`);
-          this.form.classList.remove(this.notEmptyClass);
+          this.form.classList.remove(this.NOT_EMPTY_CLASS);
           break;
 
         case `keydown`:
@@ -45,14 +45,14 @@ class Search {
   }
 
   onSearchFormFocus() {
-    this.form.classList.add(this.hasFocusClass);
+    this.form.classList.add(this.HAS_FOCUS_CLASS);
   }
 
   onSearchFormBlur(evt) {
     const formContainsFocus = this.form.contains(evt.relatedTarget);
 
     if (!formContainsFocus) {
-      this.form.classList.remove(this.hasFocusClass);
+      this.form.classList.remove(this.HAS_FOCUS_CLASS);
     }
   }
 }

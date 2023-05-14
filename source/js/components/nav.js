@@ -1,12 +1,14 @@
 class Nav {
-  constructor(navElem, buttonClass, menuClass) {
-    this.navElem = navElem;
-    this.buttonOpenClass = `${buttonClass}--open`;
-    this.menuOpenClass = `${menuClass}--open`;
-    this.buttonClosedClass = `${buttonClass}--closed`;
-    this.menuClosedClass = `${menuClass}--closed`;
-    this.button = this.navElem.querySelector(`.${buttonClass}`);
-    this.menu = this.navElem.querySelector(`.${menuClass}`);
+  constructor(navElem) {
+    this.BUTTON_CLASS = `toggle-nav-button`;
+    this.MENU_CLASS = `site-list`;
+    this.nav = navElem;
+    this.button = this.nav.querySelector(`.${this.BUTTON_CLASS}`);
+    this.menu = this.nav.querySelector(`.${this.MENU_CLASS}`);
+    this.buttonOpenClass = `${this.BUTTON_CLASS}--open`;
+    this.menuOpenClass = `${this.MENU_CLASS}--open`;
+    this.buttonClosedClass = `${this.BUTTON_CLASS}--closed`;
+    this.menuClosedClass = `${this.MENU_CLASS}--closed`;
   }
 
   init() {

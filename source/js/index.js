@@ -14,8 +14,8 @@ const init = (Component, elemSelector, ...rest) => {
 };
 
 const work = () => {
-  init(Nav, `.page-header__nav[data-expandable]`, `toggle-nav-button`, `site-list`);
-  init(Search, `#search-field`, `search--notempty`, `search--hasfocus`);
+  init(Nav, `.page-header__nav[data-expandable]`);
+  init(Search, `#search-field`);
   replaceAnchorsWithButtons(`a[data-a11y-dialog-show]`);
 
   const cartDialogContainer = document.querySelector(`#cart-dialog`);
