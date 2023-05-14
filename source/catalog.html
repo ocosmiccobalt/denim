@@ -104,100 +104,102 @@
 
       <div class="wrapper">
         <section class="filter">
-          <h2 class="visually-hidden">Filters</h2>
-          <details class="details-dropdown details-dropdown--nojs">
-            <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
+          <div class="filter__inner">
+            <h2 class="visually-hidden">Filters</h2>
+            <details class="details-dropdown details-dropdown--nojs">
+              <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
 
-            <form class="details-dropdown__content filter__form" action="#" method="get" aria-labelledby="filter-form-title">
-              <div class="filter__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
-                <h3 class="accordion__title">Price</h3>
-                <div class="accordion__panel" id="acc1-pane1">
-                  <fieldset class="filter__group filter__group--price">
-                    <div class="range range--nojs" style="--a: 40; --b: 240; --min: 0; --max: 300">
-                      <label class="visually-hidden" for="a">Denim Minimum Price:</label>
-                      <input class="range__input" type="range" name="min-price" id="a" min="0" value="40" max="300">
-                      <output class="range__output" for="a" hidden></output>
+              <form class="details-dropdown__content filter__form" action="#" method="get" aria-labelledby="filter-form-title">
+                <div class="filter__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
+                  <h3 class="accordion__title">Price</h3>
+                  <div class="accordion__panel" id="acc1-pane1">
+                    <fieldset class="filter__group filter__group--price">
+                      <div class="range range--nojs" style="--a: 40; --b: 240; --min: 0; --max: 300">
+                        <label class="visually-hidden" for="a">Denim Minimum Price:</label>
+                        <input class="range__input" type="range" name="min-price" id="a" min="0" value="40" max="300">
+                        <output class="range__output" for="a" hidden></output>
 
-                      <label class="visually-hidden" for="b">Denim Maximum Price:</label>
-                      <input class="range__input" type="range" name="max-price" id="b" min="0" value="240" max="300">
-                      <output class="range__output" for="b" hidden></output>
-                    </div>
-                  </fieldset>
+                        <label class="visually-hidden" for="b">Denim Maximum Price:</label>
+                        <input class="range__input" type="range" name="max-price" id="b" min="0" value="240" max="300">
+                        <output class="range__output" for="b" hidden></output>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <h3 class="accordion__title">Color</h3>
+                  <div class="accordion__panel" id="acc1-pane2">
+                    <fieldset class="filter__group filter__group--color">
+                      <ul class="filter__list" role="list">
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray" checked>
+                          <label class="checkbox__label checkbox__label--bg" for="blue-gray">
+                            <span class="visually-hidden">blue gray</span>
+                          </label>
+                        </li>
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy">
+                          <label class="checkbox__label checkbox__label--bg" for="navy">
+                            <span class="visually-hidden">navy</span>
+                          </label>
+                        </li>
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray">
+                          <label class="checkbox__label checkbox__label--bg" for="gray">
+                            <span class="visually-hidden">gray</span>
+                          </label>
+                        </li>
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="coal" id="coal">
+                          <label class="checkbox__label checkbox__label--bg" for="coal">
+                            <span class="visually-hidden">coal</span>
+                          </label>
+                        </li>
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray">
+                          <label class="checkbox__label checkbox__label--bg" for="light-gray">
+                            <span class="visually-hidden">light gray</span>
+                          </label>
+                        </li>
+                        <li class="filter__item checkbox">
+                          <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue">
+                          <label class="checkbox__label checkbox__label--bg" for="blue">
+                            <span class="visually-hidden">blue</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </div>
+                  <h3 class="accordion__title">Collection</h3>
+                  <div class="accordion__panel" id="acc1-pane3">
+                    <fieldset class="filter__group filter__group--collection">
+                      <ul class="filter__list" role="list">
+                        <li class="filter__item radio">
+                          <input class="radio__input visually-hidden" type="radio" name="collection" id="casual" value="casual">
+                          <label class="radio__label radio__label--filter radio__label--text" for="casual">Casual</label>
+                        </li>
+                        <li class="filter__item radio">
+                          <input class="radio__input visually-hidden" type="radio" name="collection" id="petite" value="petite">
+                          <label class="radio__label radio__label--filter radio__label--text" for="petite">Petite</label>
+                        </li>
+                        <li class="filter__item radio">
+                          <input class="radio__input visually-hidden" type="radio" name="collection" id="classic" value="classic" checked>
+                          <label class="radio__label radio__label--filter radio__label--text" for="classic">Classic</label>
+                        </li>
+                        <li class="filter__item radio">
+                          <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe" value="soulluxe">
+                          <label class="radio__label radio__label--filter radio__label--text" for="soulluxe">Soulluxe</label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </div>
                 </div>
-                <h3 class="accordion__title">Color</h3>
-                <div class="accordion__panel" id="acc1-pane2">
-                  <fieldset class="filter__group filter__group--color">
-                    <ul class="filter__list" role="list">
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray" checked>
-                        <label class="checkbox__label checkbox__label--bg" for="blue-gray">
-                          <span class="visually-hidden">blue gray</span>
-                        </label>
-                      </li>
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy">
-                        <label class="checkbox__label checkbox__label--bg" for="navy">
-                          <span class="visually-hidden">navy</span>
-                        </label>
-                      </li>
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray">
-                        <label class="checkbox__label checkbox__label--bg" for="gray">
-                          <span class="visually-hidden">gray</span>
-                        </label>
-                      </li>
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="coal" id="coal">
-                        <label class="checkbox__label checkbox__label--bg" for="coal">
-                          <span class="visually-hidden">coal</span>
-                        </label>
-                      </li>
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray">
-                        <label class="checkbox__label checkbox__label--bg" for="light-gray">
-                          <span class="visually-hidden">light gray</span>
-                        </label>
-                      </li>
-                      <li class="filter__item checkbox">
-                        <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue">
-                        <label class="checkbox__label checkbox__label--bg" for="blue">
-                          <span class="visually-hidden">blue</span>
-                        </label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
-                <h3 class="accordion__title">Collection</h3>
-                <div class="accordion__panel" id="acc1-pane3">
-                  <fieldset class="filter__group filter__group--collection">
-                    <ul class="filter__list" role="list">
-                      <li class="filter__item radio">
-                        <input class="radio__input visually-hidden" type="radio" name="collection" id="casual" value="casual">
-                        <label class="radio__label radio__label--filter radio__label--text" for="casual">Casual</label>
-                      </li>
-                      <li class="filter__item radio">
-                        <input class="radio__input visually-hidden" type="radio" name="collection" id="petite" value="petite">
-                        <label class="radio__label radio__label--filter radio__label--text" for="petite">Petite</label>
-                      </li>
-                      <li class="filter__item radio">
-                        <input class="radio__input visually-hidden" type="radio" name="collection" id="classic" value="classic" checked>
-                        <label class="radio__label radio__label--filter radio__label--text" for="classic">Classic</label>
-                      </li>
-                      <li class="filter__item radio">
-                        <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe" value="soulluxe">
-                        <label class="radio__label radio__label--filter radio__label--text" for="soulluxe">Soulluxe</label>
-                      </li>
-                    </ul>
-                  </fieldset>
-                </div>
-              </div>
-              <button class="filter__submit button button--filter" type="submit">
-                Apply (9 products)
-              </button>
-              <button class="filter__reset" type="reset">Clear all</button>
-              <button class="filter__close details-dropdown__close" type="button">Close</button>
-            </form>
-          </details>
+                <button class="filter__submit button button--filter" type="submit">
+                  Apply (9 products)
+                </button>
+                <button class="filter__reset" type="reset">Clear all</button>
+                <button class="filter__close details-dropdown__close" type="button">Close</button>
+              </form>
+            </details>
+          </div>
         </section>
 
         <section class="products products--catalog">

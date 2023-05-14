@@ -1,0 +1,28 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@media (min-width: $tablet-width) {
+  .filter {
+    padding: 0 3.9%;
+  }
+
+  .filter__inner {
+    width: 33.333%;
+    margin-left: 66.666%;
+    padding: 0 0.938em;
+    padding-top: 1.563em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    padding: 0;
+  }
+
+  .filter__inner {
+    width: 25%;
+    margin-left: 75%;
+    padding-top: 2.5em;
+    padding-left: 2.625em;
+  }
+}
