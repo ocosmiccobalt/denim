@@ -19,13 +19,13 @@
   padding-right: 2.778em;
 
   font-size: 1.125em;
-  line-height: 1.167em;
 
   border: 0.125rem solid $heavy-text-color;
 
   list-style: none;
 
   cursor: pointer;
+  transition: outline-offset 220ms ease-in-out;
 
   &::marker {
     display: none;
@@ -51,8 +51,17 @@
   }
 
   &:focus {
-    border-color: $state-color;
+    outline: 0.125em solid $state-color;
+    outline-offset: 0.25em;
+  }
+
+  &:focus:not(:focus-visible) {
     outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.125em solid $state-color;
+    outline-offset: 0.25em;
   }
 }
 
@@ -73,9 +82,9 @@
     position: fixed;
     z-index: 100;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
 
     display: block;
   }
@@ -84,9 +93,9 @@
     position: fixed;
     z-index: 150;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
 
     overflow-y: auto;
   }
