@@ -102,18 +102,18 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <section class="filter">
-          <div class="filter__inner">
-            <h2 class="visually-hidden">Filters</h2>
-            <details class="details-dropdown details-dropdown--nojs">
-              <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
+      <section class="wrapper filter">
+        <div class="filter__inner">
+          <h2 class="visually-hidden">Filters</h2>
+          <details class="details-dropdown details-dropdown--nojs">
+            <summary class="details-dropdown__summary" id="filter-form-title">Filter by</summary>
 
-              <form class="details-dropdown__content filter__form" action="#" method="get" aria-labelledby="filter-form-title">
-                <div class="filter__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
+            <div class="details-dropdown__content">
+              <form class="filter-form" action="#" method="get" aria-labelledby="filter-form-title">
+                <div class="filter-form__accordion accordion accordion--nojs" id="acc1" data-allow-toggle data-allow-multiple>
                   <h3 class="accordion__title">Price</h3>
                   <div class="accordion__panel" id="acc1-pane1">
-                    <fieldset class="filter__group filter__group--price">
+                    <fieldset class="filter-group filter-group--price">
                       <div class="range range--nojs" style="--a: 40; --b: 240; --min: 0; --max: 300">
                         <label class="visually-hidden" for="a">Denim Minimum Price:</label>
                         <input class="range__input" type="range" name="min-price" id="a" min="0" value="40" max="300">
@@ -127,39 +127,39 @@
                   </div>
                   <h3 class="accordion__title">Color</h3>
                   <div class="accordion__panel" id="acc1-pane2">
-                    <fieldset class="filter__group filter__group--color">
-                      <ul class="filter__list" role="list">
-                        <li class="filter__item checkbox">
+                    <fieldset class="filter-group filter-group--color">
+                      <ul class="filter-group__list" role="list">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="blue-gray" id="blue-gray" checked>
                           <label class="checkbox__label checkbox__label--bg" for="blue-gray">
                             <span class="visually-hidden">blue gray</span>
                           </label>
                         </li>
-                        <li class="filter__item checkbox">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="navy" id="navy">
                           <label class="checkbox__label checkbox__label--bg" for="navy">
                             <span class="visually-hidden">navy</span>
                           </label>
                         </li>
-                        <li class="filter__item checkbox">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="gray" id="gray">
                           <label class="checkbox__label checkbox__label--bg" for="gray">
                             <span class="visually-hidden">gray</span>
                           </label>
                         </li>
-                        <li class="filter__item checkbox">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="coal" id="coal">
                           <label class="checkbox__label checkbox__label--bg" for="coal">
                             <span class="visually-hidden">coal</span>
                           </label>
                         </li>
-                        <li class="filter__item checkbox">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="light-gray" id="light-gray">
                           <label class="checkbox__label checkbox__label--bg" for="light-gray">
                             <span class="visually-hidden">light gray</span>
                           </label>
                         </li>
-                        <li class="filter__item checkbox">
+                        <li class="filter-group__item checkbox">
                           <input class="checkbox__input visually-hidden" type="checkbox" name="blue" id="blue">
                           <label class="checkbox__label checkbox__label--bg" for="blue">
                             <span class="visually-hidden">blue</span>
@@ -170,21 +170,21 @@
                   </div>
                   <h3 class="accordion__title">Collection</h3>
                   <div class="accordion__panel" id="acc1-pane3">
-                    <fieldset class="filter__group filter__group--collection">
-                      <ul class="filter__list" role="list">
-                        <li class="filter__item radio">
+                    <fieldset class="filter-group filter-group--collection">
+                      <ul class="filter-group__list" role="list">
+                        <li class="filter-group__item radio">
                           <input class="radio__input visually-hidden" type="radio" name="collection" id="casual" value="casual">
                           <label class="radio__label radio__label--filter radio__label--text" for="casual">Casual</label>
                         </li>
-                        <li class="filter__item radio">
+                        <li class="filter-group__item radio">
                           <input class="radio__input visually-hidden" type="radio" name="collection" id="petite" value="petite">
                           <label class="radio__label radio__label--filter radio__label--text" for="petite">Petite</label>
                         </li>
-                        <li class="filter__item radio">
+                        <li class="filter-group__item radio">
                           <input class="radio__input visually-hidden" type="radio" name="collection" id="classic" value="classic" checked>
                           <label class="radio__label radio__label--filter radio__label--text" for="classic">Classic</label>
                         </li>
-                        <li class="filter__item radio">
+                        <li class="filter-group__item radio">
                           <input class="radio__input visually-hidden" type="radio" name="collection" id="soulluxe" value="soulluxe">
                           <label class="radio__label radio__label--filter radio__label--text" for="soulluxe">Soulluxe</label>
                         </li>
@@ -192,219 +192,219 @@
                     </fieldset>
                   </div>
                 </div>
-                <button class="filter__submit button button--filter" type="submit">
+                <button class="filter-form__submit button button--filter" type="submit">
                   Apply (9 products)
                 </button>
-                <button class="filter__reset" type="reset">Clear all</button>
-                <button class="filter__close details-dropdown__close" type="button">Close</button>
+                <button class="filter-form__reset" type="reset">Clear all</button>
+                <button class="filter-form__close details-dropdown__close" type="button">Close</button>
               </form>
-            </details>
-          </div>
-        </section>
+            </div>
+          </details>
+        </div>
+      </section>
 
-        <section class="products products--catalog">
-          <h2 class="visually-hidden">Catalog</h2>
-          <ul class="products__list products__list--catalog" role="list">
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 40</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.avif 1x, img/item-1-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.avif 1x, img/item-1-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-1-mobile@1x.avif 1x, img/item-1-mobile@2x.avif 2x" width="130" height="160">
+      <section class="wrapper products products--catalog">
+        <h2 class="visually-hidden">Catalog</h2>
+        <ul class="products__list products__list--catalog" role="list">
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 40</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.avif 1x, img/item-1-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.avif 1x, img/item-1-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-1-mobile@1x.avif 1x, img/item-1-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.webp 1x, img/item-1-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.webp 1x, img/item-1-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-1-mobile@1x.webp 1x, img/item-1-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.webp 1x, img/item-1-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.webp 1x, img/item-1-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-1-mobile@1x.webp 1x, img/item-1-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.jpg 1x, img/item-1-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.jpg 1x, img/item-1-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-1-mobile@1x.jpg" srcset="img/item-1-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 40.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 70</p>
-                <p class="card__illustration  card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.avif 1x, img/item-2-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.avif 1x, img/item-2-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-2-mobile@1x.avif 1x, img/item-2-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-1-desktop@1x.jpg 1x, img/item-1-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-1-tablet@1x.jpg 1x, img/item-1-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-1-mobile@1x.jpg" srcset="img/item-1-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 40.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 70</p>
+              <p class="card__illustration  card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.avif 1x, img/item-2-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.avif 1x, img/item-2-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-2-mobile@1x.avif 1x, img/item-2-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.webp 1x, img/item-2-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.webp 1x, img/item-2-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-2-mobile@1x.webp 1x, img/item-2-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.webp 1x, img/item-2-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.webp 1x, img/item-2-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-2-mobile@1x.webp 1x, img/item-2-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.jpg 1x, img/item-2-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.jpg 1x, img/item-2-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-2-mobile@1x.jpg" srcset="img/item-2-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 70.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 60</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.avif 1x, img/item-3-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.avif 1x, img/item-3-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-3-mobile@1x.avif 1x, img/item-3-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-2-desktop@1x.jpg 1x, img/item-2-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-2-tablet@1x.jpg 1x, img/item-2-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-2-mobile@1x.jpg" srcset="img/item-2-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 70.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 60</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.avif 1x, img/item-3-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.avif 1x, img/item-3-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-3-mobile@1x.avif 1x, img/item-3-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.webp 1x, img/item-3-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.webp 1x, img/item-3-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-3-mobile@1x.webp 1x, img/item-3-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.webp 1x, img/item-3-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.webp 1x, img/item-3-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-3-mobile@1x.webp 1x, img/item-3-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.jpg 1x, img/item-3-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.jpg 1x, img/item-3-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-3-mobile@1x.jpg" srcset="img/item-3-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 60.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 50</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.avif 1x, img/item-4-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.avif 1x, img/item-4-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-4-mobile@1x.avif 1x, img/item-4-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-3-desktop@1x.jpg 1x, img/item-3-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-3-tablet@1x.jpg 1x, img/item-3-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-3-mobile@1x.jpg" srcset="img/item-3-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 60.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 50</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.avif 1x, img/item-4-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.avif 1x, img/item-4-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-4-mobile@1x.avif 1x, img/item-4-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.webp 1x, img/item-4-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.webp 1x, img/item-4-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-4-mobile@1x.webp 1x, img/item-4-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.webp 1x, img/item-4-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.webp 1x, img/item-4-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-4-mobile@1x.webp 1x, img/item-4-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.jpg 1x, img/item-4-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.jpg 1x, img/item-4-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-4-mobile@1x.jpg" srcset="img/item-4-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 50.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog products__item--large">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 160</p>
-                <p class="card__illustration card__illustration--large">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.avif 1x, img/item-5-large-desktop@2x.avif 2x" width="552" height="670">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.avif 1x, img/item-5-large-tablet@2x.avif 2x" width="442" height="672">
-                    <source type="image/avif" srcset="img/item-5-large-mobile@1x.avif 1x, img/item-5-large-mobile@2x.avif 2x" width="290" height="442">
+                  <source media="(min-width: 75rem)" srcset="img/item-4-desktop@1x.jpg 1x, img/item-4-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-4-tablet@1x.jpg 1x, img/item-4-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-4-mobile@1x.jpg" srcset="img/item-4-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 50.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog products__item--large">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 160</p>
+              <p class="card__illustration card__illustration--large">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.avif 1x, img/item-5-large-desktop@2x.avif 2x" width="552" height="670">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.avif 1x, img/item-5-large-tablet@2x.avif 2x" width="442" height="672">
+                  <source type="image/avif" srcset="img/item-5-large-mobile@1x.avif 1x, img/item-5-large-mobile@2x.avif 2x" width="290" height="442">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.webp 1x, img/item-5-large-desktop@2x.webp 2x" width="552" height="670">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.webp 1x, img/item-5-large-tablet@2x.webp 2x" width="442" height="672">
-                    <source type="image/webp" srcset="img/item-5-large-mobile@1x.webp 1x, img/item-5-large-mobile@2x.webp 2x" width="290" height="442">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.webp 1x, img/item-5-large-desktop@2x.webp 2x" width="552" height="670">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.webp 1x, img/item-5-large-tablet@2x.webp 2x" width="442" height="672">
+                  <source type="image/webp" srcset="img/item-5-large-mobile@1x.webp 1x, img/item-5-large-mobile@2x.webp 2x" width="290" height="442">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.jpg 1x, img/item-5-large-desktop@2x.jpg 2x" width="552" height="670">
-                    <source media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.jpg 1x, img/item-5-large-tablet@2x.jpg 2x" width="442" height="672">
-                    <img class="card__image" src="img/item-5-large-mobile@1x.jpg" srcset="img/item-5-large-mobile@2x.jpg 2x" width="290" height="442" loading="lazy" alt="Jacket, $ 160.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 40</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.avif 1x, img/item-6-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.avif 1x, img/item-6-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-6-mobile@1x.avif 1x, img/item-6-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-5-large-desktop@1x.jpg 1x, img/item-5-large-desktop@2x.jpg 2x" width="552" height="670">
+                  <source media="(min-width: 48rem)" srcset="img/item-5-large-tablet@1x.jpg 1x, img/item-5-large-tablet@2x.jpg 2x" width="442" height="672">
+                  <img class="card__image" src="img/item-5-large-mobile@1x.jpg" srcset="img/item-5-large-mobile@2x.jpg 2x" width="290" height="442" loading="lazy" alt="Jacket, $ 160.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 40</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.avif 1x, img/item-6-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.avif 1x, img/item-6-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-6-mobile@1x.avif 1x, img/item-6-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.webp 1x, img/item-6-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.webp 1x, img/item-6-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-6-mobile@1x.webp 1x, img/item-6-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.webp 1x, img/item-6-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.webp 1x, img/item-6-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-6-mobile@1x.webp 1x, img/item-6-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.jpg 1x, img/item-6-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.jpg 1x, img/item-6-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-6-mobile@1x.jpg" srcset="img/item-6-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 40.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 110</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.avif 1x, img/item-7-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.avif 1x, img/item-7-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-7-mobile@1x.avif 1x, img/item-7-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-6-desktop@1x.jpg 1x, img/item-6-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-6-tablet@1x.jpg 1x, img/item-6-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-6-mobile@1x.jpg" srcset="img/item-6-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 40.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 110</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.avif 1x, img/item-7-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.avif 1x, img/item-7-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-7-mobile@1x.avif 1x, img/item-7-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.webp 1x, img/item-7-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.webp 1x, img/item-7-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-7-mobile@1x.webp 1x, img/item-7-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.webp 1x, img/item-7-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.webp 1x, img/item-7-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-7-mobile@1x.webp 1x, img/item-7-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.jpg 1x, img/item-7-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.jpg 1x, img/item-7-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-7-mobile@1x.jpg" srcset="img/item-7-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 110.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 35</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.avif 1x, img/item-8-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.avif 1x, img/item-8-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-8-mobile@1x.avif 1x, img/item-8-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-7-desktop@1x.jpg 1x, img/item-7-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-7-tablet@1x.jpg 1x, img/item-7-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-7-mobile@1x.jpg" srcset="img/item-7-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 110.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 35</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.avif 1x, img/item-8-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.avif 1x, img/item-8-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-8-mobile@1x.avif 1x, img/item-8-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.webp 1x, img/item-8-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.webp 1x, img/item-8-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-8-mobile@1x.webp 1x, img/item-8-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.webp 1x, img/item-8-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.webp 1x, img/item-8-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-8-mobile@1x.webp 1x, img/item-8-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.jpg 1x, img/item-8-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.jpg 1x, img/item-8-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-8-mobile@1x.jpg" srcset="img/item-8-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 35.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-            <li class="products__item products__item--catalog">
-              <article class="card">
-                <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
-                <p class="card__price">$ 85</p>
-                <p class="card__illustration card__illustration--catalog">
-                  <picture>
-                    <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.avif 1x, img/item-9-desktop@2x.avif 2x" width="243" height="270">
-                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.avif 1x, img/item-9-tablet@2x.avif 2x" width="206" height="279">
-                    <source type="image/avif" srcset="img/item-9-mobile@1x.avif 1x, img/item-9-mobile@2x.avif 2x" width="130" height="160">
+                  <source media="(min-width: 75rem)" srcset="img/item-8-desktop@1x.jpg 1x, img/item-8-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-8-tablet@1x.jpg 1x, img/item-8-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-8-mobile@1x.jpg" srcset="img/item-8-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 35.">
+                </picture>
+              </p>
+            </article>
+          </li>
+          <li class="products__item products__item--catalog">
+            <article class="card">
+              <h3 class="card__title"><a class="card__link" href="#">Jacket</a></h3>
+              <p class="card__price">$ 85</p>
+              <p class="card__illustration card__illustration--catalog">
+                <picture>
+                  <source type="image/avif" media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.avif 1x, img/item-9-desktop@2x.avif 2x" width="243" height="270">
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.avif 1x, img/item-9-tablet@2x.avif 2x" width="206" height="279">
+                  <source type="image/avif" srcset="img/item-9-mobile@1x.avif 1x, img/item-9-mobile@2x.avif 2x" width="130" height="160">
 
-                    <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.webp 1x, img/item-9-desktop@2x.webp 2x" width="243" height="270">
-                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.webp 1x, img/item-9-tablet@2x.webp 2x" width="206" height="279">
-                    <source type="image/webp" srcset="img/item-9-mobile@1x.webp 1x, img/item-9-mobile@2x.webp 2x" width="130" height="160">
+                  <source type="image/webp" media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.webp 1x, img/item-9-desktop@2x.webp 2x" width="243" height="270">
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.webp 1x, img/item-9-tablet@2x.webp 2x" width="206" height="279">
+                  <source type="image/webp" srcset="img/item-9-mobile@1x.webp 1x, img/item-9-mobile@2x.webp 2x" width="130" height="160">
 
-                    <source media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.jpg 1x, img/item-9-desktop@2x.jpg 2x" width="243" height="270">
-                    <source media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.jpg 1x, img/item-9-tablet@2x.jpg 2x" width="206" height="279">
-                    <img class="card__image" src="img/item-9-mobile@1x.jpg" srcset="img/item-9-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 85.">
-                  </picture>
-                </p>
-              </article>
-            </li>
-          </ul>
-          <div class="products__showing showing">
-            <p class="showing__count">
-              Showing <span class="showing__shown">9</span> of <span class="showing__total">45</span> items
-            </p>
-            <button class="showing__button button button--showing" type="button">
-              Load more
-            </button>
-          </div>
-        </section>
-      </div>
+                  <source media="(min-width: 75rem)" srcset="img/item-9-desktop@1x.jpg 1x, img/item-9-desktop@2x.jpg 2x" width="243" height="270">
+                  <source media="(min-width: 48rem)" srcset="img/item-9-tablet@1x.jpg 1x, img/item-9-tablet@2x.jpg 2x" width="206" height="279">
+                  <img class="card__image" src="img/item-9-mobile@1x.jpg" srcset="img/item-9-mobile@2x.jpg 2x" width="130" height="160" loading="lazy" alt="Jacket, $ 85.">
+                </picture>
+              </p>
+            </article>
+          </li>
+        </ul>
+        <div class="products__showing showing">
+          <p class="showing__count">
+            Showing <span class="showing__shown">9</span> of <span class="showing__total">45</span> items
+          </p>
+          <button class="showing__button button button--showing" type="button">
+            Load more
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
