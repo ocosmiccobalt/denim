@@ -1,4 +1,4 @@
-import { checkTab } from '../util/checkKey.js';
+import { isTab } from '../util/checkKey.js';
 
 class Search {
   constructor(searchInputElem) {
@@ -36,7 +36,7 @@ class Search {
           break;
 
         case `keydown`:
-          if (checkTab(evt)) {
+          if (isTab(evt)) {
             this.button.setAttribute(`tabindex`, `-1`);
           }
           break;

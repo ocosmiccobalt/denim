@@ -1,4 +1,4 @@
-import { checkEsc } from '../util/checkKey.js';
+import { isEsc } from '../util/checkKey.js';
 
 class DetailsDropdown {
   constructor(detailsElem) {
@@ -54,7 +54,7 @@ class DetailsDropdown {
   }
 
   onDetailsKeydown(evt) {
-    if (checkEsc(evt)) {
+    if (isEsc(evt)) {
       this.details.open = false;
       this.summary.focus();
     }
