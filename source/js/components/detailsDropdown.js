@@ -6,8 +6,10 @@ class DetailsDropdown {
     this.FOCUSABLE_ELEMS_SELECTOR = `a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]`;
     this.details = detailsElem;
     this.summary = this.details.querySelector(`summary`);
+    this.content = this.summary.nextElementSibling;
     this.closeButton = this.details.querySelector(`.details-dropdown__close`);
-    this.firstTabStop = this.summary.nextElementSibling.querySelectorAll(this.FOCUSABLE_ELEMS_SELECTOR)[0];
+    // Not ideal because children can be added to the DOM after instantiation:
+    this.firstTabStop = this.content.querySelectorAll(this.FOCUSABLE_ELEMS_SELECTOR)[0];
   }
 
   init() {
@@ -23,8 +25,8 @@ class DetailsDropdown {
   onDetailsToggle() {
     const onDetailsOpen = () => {
       /*
-      Might be:
-      const summaryIsCoveredByContent = this.closeButton?.offsetWidth;
+        Might be:
+        const summaryIsCoveredByContent = this.closeButton?.offsetWidth;
       */
       const summaryIsCoveredByContent = this.closeButton !== null && this.closeButton.offsetWidth !== 0;
 
@@ -46,7 +48,7 @@ class DetailsDropdown {
 
   onDetailsFocusout(evt) {
     const focus = evt.relatedTarget !== null;
-    const containsFocus = this.details.contains(evt.relatedTarget);
+    const containsFocus = this.content.contains(evt.relatedTarget);
 
     if (focus && !containsFocus) {
       this.details.open = false;
