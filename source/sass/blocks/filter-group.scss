@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.filter-group {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--price {
+    padding: 0 0.938em;
+  }
+
+  &--color {
+    padding: 0 0.188em;
+    padding-bottom: 1em;
+  }
+
+  &--collection {
+    padding-bottom: 0.813em;
+  }
+}
+
+.filter-group__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+
+  @include reset-list();
+}
+
+.filter-group__item {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-group {
+    &--price {
+      padding: 0 0.813em;
+    }
+
+    &--color {
+      width: 75%;
+      padding-bottom: 0.938em;
+    }
+
+    &--collection {
+      padding-bottom: 0.938em;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-group {
+    &--color {
+      width: 100%;
+      padding-left: 0.313em;
+      padding-right: 0;
+    }
+
+    &--collection {
+      width: 90%;
+    }
+  }
+}
