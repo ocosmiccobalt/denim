@@ -23,8 +23,8 @@ const work = () => {
   const cartDialogContainer = document.querySelector(`#cart-dialog`);
   new A11yDialog(cartDialogContainer);
 
-  init(DetailsDropdown, `.details-dropdown`);
   init(Accordion, `.accordion`);
+  init(DetailsDropdown, `.details-dropdown`);
 };
 
 if (document.readyState === `loading`) {
