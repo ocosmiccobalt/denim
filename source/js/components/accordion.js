@@ -2,20 +2,20 @@ import * as key from '../util/checkKey.js';
 
 class Accordion {
   constructor(accordionElem) {
+    this.ACCORDION_NOJS_CLASS = `accordion--nojs`;
     this.accordion = accordionElem;
     // Allow for multiple accordion sections to be expanded at the same time
     this.allowMultiple = this.accordion.hasAttribute(`data-allow-multiple`);
     // Allow for each toggle to both open and close individually
     this.allowToggle = (this.allowMultiple) ? this.allowMultiple : this.accordion.hasAttribute(`data-allow-toggle`);
-    this.headingSelector = `.accordion__title`;
+    this.headings = this.accordion.querySelectorAll(`.accordion__title`);
     this.triggers = [];
   }
 
   init() {
     const id = this.accordion.id;
-    const headings = this.accordion.querySelectorAll(this.headingSelector);
 
-    headings.forEach((h, i) => {
+    this.headings.forEach((h, i) => {
       const panel = h.nextElementSibling;
       const panelId = `${id}-pane${i + 1}`;
       const buttonId = `${id}-btn${i + 1}`;
@@ -39,7 +39,7 @@ class Accordion {
       panel.setAttribute(`aria-labelledby`, buttonId);
     });
 
-    this.accordion.classList.remove(`accordion--nojs`);
+    this.accordion.classList.remove(this.ACCORDION_NOJS_CLASS);
 
     if (!this.allowToggle) {
       const expanded = this.accordion.querySelector(`[aria-expanded="true"]`);

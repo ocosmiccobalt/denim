@@ -1,12 +1,13 @@
 class Range {
   constructor(rangeElem) {
+    this.RANGE_NOJS_CLASS = `range--nojs`;
     this.range = rangeElem;
     this.inputs = this.range.querySelectorAll(`input[type="range"]`);
     this.form = this.inputs[0].form;
   }
 
   init() {
-    this.range.classList.remove(`range--nojs`);
+    this.range.classList.remove(this.RANGE_NOJS_CLASS);
 
     this.inputs.forEach((input) => {
       input.output = this.range.querySelector(`output[for="${input.id}"]`);
@@ -15,6 +16,7 @@ class Range {
     });
 
     this.range.addEventListener(`input`, this.onRangeInput.bind(this));
+
     if (this.form !== undefined) {
       this.form.addEventListener(`reset`, this.onRangeFormReset.bind(this));
     }
@@ -24,15 +26,15 @@ class Range {
     input.output.value = `$ ${input.value}`;
   }
 
-  setCssPropertyValue(input) {
+  setRangeValue(input) {
     this.range.style.setProperty(`--${input.id}`, input.value);
+    this.setOutputValue(input);
   }
 
   onRangeFormReset() {
     const timer = setTimeout(() => {
       this.inputs.forEach((input) => {
-        this.setCssPropertyValue(input);
-        this.setOutputValue(input);
+        this.setRangeValue(input);
       });
       clearTimeout(timer);
     }, 0);
@@ -41,9 +43,8 @@ class Range {
   onRangeInput(evt) {
     const target = evt.target;
 
-    if (target.tagName === `INPUT` && target.type === `range`) {
-      this.setCssPropertyValue(target);
-      this.setOutputValue(target);
+    if (target.type === `range`) {
+      this.setRangeValue(target);
     }
   }
 }
