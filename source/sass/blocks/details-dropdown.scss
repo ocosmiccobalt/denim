@@ -76,21 +76,6 @@
 }
 
 .details-dropdown[open]:not(.details-dropdown--nojs) {
-  & > .details-dropdown__summary::before {
-    content: "";
-
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    cursor: auto;
-  }
-
   & > .details-dropdown__summary ~ .details-dropdown__content {
     position: fixed;
     z-index: 150;
