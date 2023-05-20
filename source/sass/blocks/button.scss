@@ -89,6 +89,14 @@
 
   .button--filter {
     width: 100%;
+
+    &:focus {
+      outline-offset: -0.25em;
+    }
+
+    &:focus-visible {
+      outline-offset: -0.25em;
+    }
   }
 
   .button--showing {

@@ -120,5 +120,19 @@
     padding-bottom: 1.5em;
 
     text-align: center;
+
+    &:focus {
+      outline: 0.25em solid $state-color;
+      outline-offset: -0.25em;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 0.25em solid $state-color;
+      outline-offset: -0.25em;
+    }
   }
 }
