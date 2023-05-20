@@ -1,0 +1,235 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.range {
+  width: 100%;
+
+  &::before {
+    content: "Set the min and the max price";
+
+    display: block;
+    padding: 0.5em 0;
+
+    font: inherit;
+  }
+}
+
+.range__input {
+  &::-webkit-slider-runnable-track,
+  &::-webkit-slider-thumb,
+  & {
+    -webkit-appearance: none; /* stylelint-disable-line */
+  }
+
+  appearance: none;
+
+  width: 100%;
+  height: $d;
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0;
+
+  font: inherit;
+
+  background: none;
+
+  &:focus {
+    outline-color: $state-color;
+  }
+
+  &[disabled] {
+    opacity: 0.625;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track();
+  }
+
+  &::-moz-range-track {
+    @include track();
+  }
+
+  &::-ms-track {
+    @include track();
+
+    color: transparent;
+
+    background: transparent;
+  }
+
+  &:first-of-type::-ms-fill-lower {
+    background-color: $alt-bg-color;
+  }
+
+  &:first-of-type::-ms-fill-upper {
+    background-color: $heavy-text-color;
+  }
+
+  &:last-of-type::-ms-fill-lower {
+    background-color: $heavy-text-color;
+  }
+
+  &:last-of-type::-ms-fill-upper {
+    background-color: $alt-bg-color;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb();
+  }
+
+  &[disabled]::-webkit-slider-thumb {
+    cursor: not-allowed;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb();
+  }
+
+  &[disabled]::-moz-range-thumb {
+    cursor: not-allowed;
+  }
+
+  &::-ms-thumb {
+    @include thumb();
+  }
+
+  &[disabled]::-ms-thumb {
+    cursor: not-allowed;
+  }
+}
+
+.range__output {
+  display: block;
+  margin: 0 1.071em;
+  padding-bottom: 0.929em;
+
+  font-family: $work-sans-700-800-font-family;
+  font-weight: 700;
+  font-size: 0.875em;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+@supports (--dif: calc(var(--max) - var(--min))) {
+  .range:not(.range--nojs) {
+    --dif: calc(var(--max) - var(--min));
+
+    display: grid;
+    grid-template: #{$h} max-content / repeat(2, minmax(0, 1fr));
+
+    position: relative;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) calc(0.625 * #{$h} - 0.063em), $alt-bg-color calc(0.625 * #{$h} + 0.063em), rgba(255, 255, 255, 0) 0);
+
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      grid-column: 1 / span 2;
+      grid-row: 1;
+
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) calc(0.625 * #{$h} - 0.063em), $heavy-text-color calc(0.625 * #{$h} + 0.063em), rgba(255, 255, 255, 0) 0);
+    }
+
+    &::before {
+      width: calc((var(--b) - var(--a)) / var(--dif) * (100% - #{$d}));
+      margin-left: calc(#{$r} + (var(--a) - var(--min)) / var(--dif) * (100% - #{$d}));
+      padding: 0;
+    }
+
+    &::after {
+      width: calc((var(--a) - var(--b)) / var(--dif) * (100% - #{$d}));
+      margin-left: calc(#{$r} + (var(--b) - var(--min)) / var(--dif) * (100% - #{$d}));
+    }
+  }
+
+  .range:not(.range--nojs) .range__input {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+
+    --col: #{$heavy-text-color};
+
+    pointer-events: none;
+
+    &:focus {
+      z-index: 2;
+    }
+
+    &:focus,
+    &:active,
+    &:focus + .range__output,
+    &:active + .range__output {
+      --col: #{$state-color};
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track-advanced();
+    }
+
+    &::-moz-range-track {
+      @include track-advanced();
+    }
+
+    &::-ms-track {
+      @include track-advanced();
+    }
+
+    &:first-of-type::-ms-fill-lower {
+      background: none;
+    }
+
+    &:first-of-type::-ms-fill-upper {
+      background: none;
+    }
+
+    &:last-of-type::-ms-fill-lower {
+      background: none;
+    }
+
+    &:last-of-type::-ms-fill-upper {
+      background: none;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb-advanced();
+    }
+
+    &::-moz-range-thumb {
+      @include thumb-advanced();
+    }
+
+    &::-ms-thumb {
+      @include thumb-advanced();
+    }
+  }
+
+  .range:not(.range--nojs) .range__output {
+    grid-row: 2;
+    justify-self: start;
+
+    color: var(--col);
+
+    &:last-child {
+      justify-self: end;
+
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .range__output {
+    padding-bottom: 1.071em;
+  }
+}

@@ -30,3 +30,8 @@ $stripes-color: color.adjust($heavy-text-color, $alpha: -0.3);
 $work-sans-400-500-font-family: "Work Sans", "Work Sans fallback", "Verdana", sans-serif;
 $work-sans-700-800-font-family: "Work Sans", "Work Sans fallback", "Tahoma", "Verdana", sans-serif;
 $anton-font-family: "Anton", "Impact", "Anton fallback", sans-serif;
+
+/* Two-Thumb Slider dimensions */
+$h: 2em;
+$d: 0.5 * $h;
+$r: 0.5 * $d;
