@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.product__wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.product__spec {
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  width: 100%;
+  padding: 0 0.938em;
+}
+
+.product__carousel {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .product__wrapper {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+
+    padding: 0 3.9%;
+    padding-top: 2.25em;
+  }
+
+  .product__spec {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product__wrapper {
+    padding: 0;
+    padding-top: 3.438em;
+  }
+}
