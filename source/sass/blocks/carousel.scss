@@ -50,6 +50,7 @@
     outline-offset: -0.125em;
   }
 
+  &[aria-disabled="true"],
   &[disabled] {
     opacity: 0.5;
 
@@ -75,6 +76,8 @@
 
 .carousel__inner {
   width: 100%;
+
+  overflow: hidden;
 }
 
 .carousel__list {
@@ -84,8 +87,6 @@
   margin: 0;
 
   @include reset-list();
-
-  overflow: hidden;
 
   .carousel--nojs & {
     overflow-x: auto;
@@ -103,6 +104,10 @@
   .carousel--nojs & {
     scroll-snap-align: center;
   }
+}
+
+.carousel__slide[hidden] {
+  display: none;
 }
 
 .carousel__image {
@@ -176,6 +181,7 @@
       outline-offset: 0.25em;
     }
 
+    &[aria-disabled="true"],
     &[disabled] {
       cursor: not-allowed;
     }
