@@ -6,6 +6,7 @@ import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 import DetailsDropdown from './components/detailsDropdown.js';
 import Accordion from './components/accordion.js';
 import Range from './components/range.js';
+import Carousel from './components/carousel.js';
 
 const init = (Component, elemSelector, ...rest) => {
   const elem = document.querySelector(elemSelector);
@@ -27,6 +28,7 @@ const work = () => {
   init(Accordion, `.accordion`);
   init(Range, `.range`);
   init(DetailsDropdown, `.details-dropdown`);
+  init(Carousel, `.carousel`);
 };
 
 if (document.readyState === `loading`) {
