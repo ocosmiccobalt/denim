@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+.indicator {
+  text-align: center;
+}
+
+.indicator__message {
+  margin: 0;
+  margin-bottom: 0.563em;
+  padding-top: 0.5em;
+
+  font: inherit;
+  font-weight: 400;
+}
+
+.indicator__progress-bar {
+  width: 11.063em;
+  height: 0.125em;
+
+  margin: 0 auto;
+  margin-bottom: 1.875em;
+
+  background-color: $denim-light-gray;
+}
+
+.indicator__fill {
+  height: 0.125em;
+
+  background-color: $heavy-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .indicator {
+    padding-bottom: 3.125em;
+  }
+
+  .indicator__message {
+    margin-bottom: 0.167em;
+    padding-top: 0.333em;
+
+    font-size: 1.125em;
+  }
+
+  .indicator__progress-bar {
+    width: 12.875em;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .indicator {
+    padding-bottom: 3.313em;
+  }
+
+  .indicator__progress-bar {
+    width: 12.5em;
+  }
+}
