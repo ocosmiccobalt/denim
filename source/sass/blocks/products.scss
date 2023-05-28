@@ -157,7 +157,7 @@
   .products__title {
     flex-shrink: 0;
     flex-basis: auto;
-    order: 1;
+    order: -1;
 
     width: 75%;
     margin-bottom: 1.893em;
@@ -167,7 +167,6 @@
   .products__list {
     flex-shrink: 0;
     flex-basis: auto;
-    order: 3;
 
     width: 100%;
     max-width: 100%;
@@ -197,7 +196,7 @@
   .products__view-all {
     flex-shrink: 0;
     flex-basis: auto;
-    order: 2;
+    order: -1;
 
     width: 25%;
     margin-bottom: 3.313em;
@@ -214,10 +213,9 @@
     line-height: 1.313;
   }
 
-  .products__showing {
+  .products__indicator {
     flex-shrink: 0;
     flex-basis: auto;
-    order: 4;
 
     width: 100%;
   }

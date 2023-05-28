@@ -396,11 +396,14 @@
             </article>
           </li>
         </ul>
-        <div class="products__showing showing">
-          <p class="showing__count">
-            Showing <span class="showing__shown">9</span> of <span class="showing__total">45</span> items
+        <div class="products__indicator indicator">
+          <p class="indicator__message" aria-live="polite">
+            Showing <span class="indicator__done">9</span> of <span class="indicator__total">45</span> items
           </p>
-          <button class="showing__button button button--showing" type="button">
+          <div class="indicator__progress-bar">
+            <div class="indicator__fill" style="width: 20%"></div>
+          </div>
+          <button class="products__button indicator__button button button--products" type="button">
             Load more
           </button>
         </div>
