@@ -101,6 +101,8 @@
 
   width: 100%;
 
+  aspect-ratio: var(--mobile-aspect-ratio);
+
   .carousel--nojs & {
     scroll-snap-align: center;
   }
@@ -199,6 +201,10 @@
     flex-basis: auto;
   }
 
+  .carousel__item {
+    aspect-ratio: var(--tablet-aspect-ratio);
+  }
+
   @supports (display: grid) {
     .carousel__pagination {
       display: grid;
@@ -255,6 +261,10 @@
 
     width: 66.666%;
     margin-left: 5.313em;
+  }
+
+  .carousel__item {
+    aspect-ratio: var(--desktop-aspect-ratio);
   }
 
   @supports (display: grid) {
