@@ -218,6 +218,10 @@
     }
   }
 
+  .intro__image {
+    aspect-ratio: var(--tablet-aspect-ratio);
+  }
+
   .intro__socials {
     order: 4;
 
@@ -300,6 +304,10 @@
     &::after {
       bottom: 0;
     }
+  }
+
+  .intro__image {
+    aspect-ratio: var(--desktop-aspect-ratio);
   }
 
   .intro__socials {

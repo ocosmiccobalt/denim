@@ -170,4 +170,8 @@
   .about-catalog__illustration {
     width: 18.688em;
   }
+
+  .about-catalog__image {
+    aspect-ratio: var(--desktop-aspect-ratio);
+  }
 }

@@ -122,6 +122,10 @@
       margin-top: -18.21%;
     }
   }
+
+  .card__image {
+    aspect-ratio: var(--tablet-aspect-ratio);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -130,5 +134,9 @@
     .products__item--categories:nth-child(4n) & {
       margin-top: 0;
     }
+  }
+
+  .card__image {
+    aspect-ratio: var(--desktop-aspect-ratio);
   }
 }

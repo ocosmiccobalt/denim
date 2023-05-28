@@ -141,6 +141,10 @@
 
     width: calc(50% + 0.938em);
   }
+
+  .collection__image {
+    aspect-ratio: var(--tablet-aspect-ratio);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -181,5 +185,9 @@
 
   .collection__illustration {
     width: 59.82%;
+  }
+
+  .collection__image {
+    aspect-ratio: var(--desktop-aspect-ratio);
   }
 }
