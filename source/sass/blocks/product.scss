@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .product__wrapper {
   display: flex;
@@ -11,6 +12,9 @@
 
   width: 100%;
   padding: 0 0.938em;
+  padding-top: 2.188em;
+
+  background-color: $alt-bg-color;
 }
 
 .product__carousel {
@@ -18,17 +22,68 @@
   flex-basis: auto;
 }
 
+.product__title {
+  margin: 0;
+  margin-bottom: 0.769em;
+
+  @include title-font();
+}
+
+.product__description {
+  margin: 0;
+  margin-bottom: 1.857em;
+  padding-right: 1.071em;
+
+  font-weight: 400;
+  font-size: 0.875em;
+  color: inherit;
+}
+
 @media (min-width: $tablet-width) {
   .product__wrapper {
     flex-direction: row-reverse;
-    align-items: flex-start;
 
     padding: 0 3.9%;
     padding-top: 2.25em;
   }
 
   .product__spec {
+    position: relative;
+
     width: 50%;
+    padding-top: 2.813em;
+    padding-right: 0.875em;
+    padding-left: 4.063em;
+
+    background-color: transparent;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 100%;
+      left: 0;
+
+      height: 100%;
+      margin-right: -50vw;
+
+      background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0.938em,
+        $alt-bg-color 0.938em
+      );
+    }
+  }
+
+  .product__title {
+    margin-bottom: 1.071em;
+  }
+
+  .product__description {
+    margin-bottom: 2.857em;
+    padding-right: 0;
   }
 }
 
@@ -36,5 +91,21 @@
   .product__wrapper {
     padding: 0;
     padding-top: 3.438em;
+  }
+
+  .product__spec {
+    padding-top: 3.875em;
+    padding-left: 5.313em;
+  }
+
+  .product__title {
+    margin-bottom: 0.875em;
+  }
+
+  .product__description {
+    width: 23.125em;
+    margin-bottom: 2.688em;
+
+    font-size: 1em;
   }
 }
