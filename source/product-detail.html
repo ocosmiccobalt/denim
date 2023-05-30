@@ -74,29 +74,29 @@
       <div class="product__wrapper wrapper">
         <div class="product__spec">
           <h1 class="product__title">Overalls</h1>
-          <p class="product__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front pockets and back pockets.</p>
+          <p class="product__description">Overalls in washed organic cotton denim. Collar, button fly, and adjustable belt at waist. Chest pockets with flap. Long, gently flared sleeves and straight legs with front and back pockets.</p>
 
           <section class="product__choice">
             <h2 class="visually-hidden" id="product-form-label">Choose color and size</h2>
             <form class="product__form product-form" action="#" method="post" aria-labelledby="product-form-label">
               <fieldset class="product-form__group">
                 <legend class="product-form__subtitle">Color</legend>
-                <ul class="product-form__list" role="list">
+                <ul class="product-form__list product-form__list--color" role="list">
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="color" id="blue-gray-to-cart" value="blue-gray" checked>
-                    <label class="radio__label radio__label--card radio__label--bg" for="blue-gray-to-cart">
+                    <label class="radio__label radio__label--product-color radio__label--bg" for="blue-gray-to-cart">
                       <span class="visually-hidden">Blue gray</span>
                     </label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="color" id="navy-to-cart" value="navy">
-                    <label class="radio__label radio__label--card radio__label--bg" for="navy-to-cart">
+                    <label class="radio__label radio__label--product-color radio__label--bg" for="navy-to-cart">
                       <span class="visually-hidden">Navy</span>
                     </label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="color" id="gray-to-cart" value="gray">
-                    <label class="radio__label radio__label--card radio__label--bg" for="gray-to-cart">
+                    <label class="radio__label radio__label--product-color radio__label--bg" for="gray-to-cart">
                       <span class="visually-hidden">Gray</span>
                     </label>
                   </li>
@@ -104,36 +104,26 @@
               </fieldset>
               <fieldset class="product-form__group">
                 <legend class="product-form__subtitle">Size</legend>
-                <ul class="product-form__list" role="list">
+                <ul class="product-form__list product-form__list--size" role="list">
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="size" id="XS" value="XS">
-                    <label class="radio__label radio__label--card radio__label--text" for="XS">
-                      <span class="visually-hidden">XS</span>
-                    </label>
+                    <label class="radio__label radio__label--product-size radio__label--text" for="XS">XS</label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="size" id="S" value="S" checked>
-                    <label class="radio__label radio__label--card radio__label--text" for="S">
-                      <span class="visually-hidden">S</span>
-                    </label>
+                    <label class="radio__label radio__label--product-size radio__label--text" for="S">S</label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="size" id="M" value="M">
-                    <label class="radio__label radio__label--card radio__label--text" for="M">
-                      <span class="visually-hidden">M</span>
-                    </label>
+                    <label class="radio__label radio__label--product-size radio__label--text" for="M">M</label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="size" id="L" value="L">
-                    <label class="radio__label radio__label--card radio__label--text" for="L">
-                      <span class="visually-hidden">L</span>
-                    </label>
+                    <label class="radio__label radio__label--product-size radio__label--text" for="L">L</label>
                   </li>
                   <li class="product-form__item radio">
                     <input class="radio__input visually-hidden" type="radio" name="size" id="XL" value="XL">
-                    <label class="radio__label radio__label--card radio__label--text" for="XL">
-                      <span class="visually-hidden">XL</span>
-                    </label>
+                    <label class="radio__label radio__label--product-size radio__label--text" for="XL">XL</label>
                   </li>
                 </ul>
               </fieldset>
