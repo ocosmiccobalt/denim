@@ -8,6 +8,17 @@
     max-width: 7.5em;
     padding: 0.5em 1.071em;
   }
+
+  &--product-color {
+    padding: 0.438em 0.563em;
+  }
+
+  &--product-size {
+    max-width: 7.5em;
+    padding: 0.286em 0.929em;
+
+    text-transform: uppercase;
+  }
 }
 
 .radio__input:not(:disabled) + .radio__label {
@@ -24,6 +35,16 @@
       padding-left: 0.929em;
       padding-top: 0.429em;
       padding-bottom: 0.429em;
+    }
+
+    &--product-color {
+      padding: 0.438em 0.75em;
+    }
+
+    &--product-size {
+      padding: 0.222em 0.556em;
+
+      font-size: 1.125em;
     }
   }
 }
