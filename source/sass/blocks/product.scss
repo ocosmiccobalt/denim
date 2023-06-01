@@ -20,6 +20,8 @@
 .product__carousel {
   flex-shrink: 0;
   flex-basis: auto;
+
+  margin: 0 auto;
 }
 
 .product__title {
@@ -79,6 +81,10 @@
         $alt-bg-color 0.938em
       );
     }
+  }
+
+  .product__carousel {
+    margin: 0;
   }
 
   .product__title {
