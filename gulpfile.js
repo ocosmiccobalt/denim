@@ -113,7 +113,11 @@ export function clean(done) {
 export function copy() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/img/**",
+    "source/*.ico",
+    "source/*.png",
+    "source/*.svg",
+    "source/*.webmanifest"
   ], {
     base: "source"
   })
@@ -164,6 +168,11 @@ export function serve(done) {
   done();
 }
 
+function webmanifest() {
+  return gulp.src("source/*.webmanifest")
+    .pipe(gulp.dest("build"));
+}
+
 function reload(done) {
   server.reload();
   done();
@@ -173,6 +182,7 @@ export function watch() {
   gulp.watch("source/sass/**/*.{scss,sass}", style);
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/js/**/*.js", gulp.series(jsDev, reload));
+  gulp.watch("source/*.webmanifest", gulp.series(webmanifest, reload));
 }
 
 export function deploy(done) {
