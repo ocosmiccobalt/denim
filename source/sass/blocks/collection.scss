@@ -18,6 +18,15 @@
   );
   background-size: 1.55em 1.55em;
   background-repeat: repeat;
+  // alternative:
+  /* background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 1em,
+    $heavy-text-color 1.063em,
+    $heavy-text-color 1.125em
+  );
+  background-size: auto auto; */
 }
 
 .collection__inner {
@@ -164,6 +173,15 @@
       rgba(255, 255, 255, 0) 4%
     );
     background-size: 2.15em 2.15em;
+    // alternative:
+    /* background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 1.5em,
+      $heavy-text-color 1.625em,
+      $heavy-text-color 1.688em
+    );
+    background-size: auto auto; */
   }
 
   .collection__inner {

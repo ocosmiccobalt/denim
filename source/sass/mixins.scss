@@ -149,20 +149,13 @@
   }
 
   .#{$block}__input:disabled + .#{$block}__label--bg {
-    background-image: linear-gradient(
+    background-image: repeating-linear-gradient(
       45deg,
-      rgba(255, 255, 255, 0) 49.9%,
-      $stripes-color 49.9%,
-      $stripes-color 60%,
-      rgba(255, 255, 255, 0) 60%
-    ),
-      linear-gradient(
-      45deg,
-      $stripes-color 10%,
-      rgba(255, 255, 255, 0) 10%
+      $stripes-color,
+      $stripes-color 0.063em,
+      rgba(255, 255, 255, 0) 0.125em,
+      rgba(255, 255, 255, 0) 0.375em
     );
-    background-size: 0.5em 0.5em;
-    background-repeat: repeat;
 
     cursor: not-allowed;
   }
