@@ -47,7 +47,7 @@
   }
 
   &[href]:hover,
-  &[href]:active {
+  &:focus {
     text-decoration: underline;
   }
 
@@ -64,6 +64,17 @@
     outline: 0.125em solid $state-color;
     outline-offset: 0.125em;
   }
+}
+
+.card:focus-within .card__link:focus {
+  outline: none;
+}
+
+.card:focus-within {
+  transition: 220ms ease-in-out;
+
+  outline: 0.25em solid $state-color;
+  outline-offset: 0.25em;
 }
 
 .card__price {
