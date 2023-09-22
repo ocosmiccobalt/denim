@@ -70,7 +70,6 @@
   }
 
   &:focus,
-  .search:active &,
   .search--hasfocus & {
     z-index: 10;
 
@@ -139,7 +138,6 @@
   transition: transform 0.3s ease-in;
 
   .search__input:focus ~ &,
-  .search:active &,
   .search--hasfocus & {
     z-index: 10;
 
