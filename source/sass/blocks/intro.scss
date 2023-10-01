@@ -72,26 +72,28 @@
     top: -1.25em;
     left: -1.25em;
 
-    background-image: repeating-linear-gradient(
-      45deg,
-      $stripes-color,
-      $stripes-color 0.063em,
-      rgba(255, 255, 255, 0) 0.125em,
-      rgba(255, 255, 255, 0) 0.375em
-    );
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        $stripes-color,
+        $stripes-color 0.063em,
+        rgba(255, 255, 255, 0) 0.125em,
+        rgba(255, 255, 255, 0) 0.375em
+      );
   }
 
   &::after {
     right: -1.25em;
     bottom: -1.25em;
 
-    background-image: repeating-linear-gradient(
-      -45deg,
-      $stripes-color,
-      $stripes-color 0.063em,
-      rgba(255, 255, 255, 0) 0.125em,
-      rgba(255, 255, 255, 0) 0.375em
-    );
+    background-image:
+      repeating-linear-gradient(
+        -45deg,
+        $stripes-color,
+        $stripes-color 0.063em,
+        rgba(255, 255, 255, 0) 0.125em,
+        rgba(255, 255, 255, 0) 0.375em
+      );
   }
 }
 
@@ -170,26 +172,28 @@
       top: -1.875em;
       left: 0;
 
-      background-image: repeating-linear-gradient(
-        45deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.5em
-      );
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.5em
+        );
     }
 
     &::after {
       right: 0;
       bottom: -1.875em;
 
-      background-image: repeating-linear-gradient(
-        -45deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.5em
-      );
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.5em
+        );
     }
   }
 
@@ -273,25 +277,27 @@
     &::before {
       top: 0;
 
-      background-image: repeating-linear-gradient(
-        45deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.75em
-      );
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.75em
+        );
     }
 
     &::after {
       bottom: 0;
 
-      background-image: repeating-linear-gradient(
-        -45deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.75em
-      );
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.75em
+        );
     }
   }
 

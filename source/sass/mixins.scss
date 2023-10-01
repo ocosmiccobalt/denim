@@ -149,13 +149,14 @@
   }
 
   .#{$block}__input:disabled + .#{$block}__label--bg {
-    background-image: repeating-linear-gradient(
-      45deg,
-      $stripes-color,
-      $stripes-color 0.063em,
-      rgba(255, 255, 255, 0) 0.125em,
-      rgba(255, 255, 255, 0) 0.375em
-    );
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        $stripes-color,
+        $stripes-color 0.063em,
+        rgba(255, 255, 255, 0) 0.125em,
+        rgba(255, 255, 255, 0) 0.375em
+      );
 
     cursor: not-allowed;
   }

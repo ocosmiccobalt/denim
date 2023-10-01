@@ -94,13 +94,14 @@
 
       height: 8.438em;
 
-      background-image: repeating-linear-gradient(
-        225deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.625em
-      );
+      background-image:
+        repeating-linear-gradient(
+          225deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.625em
+        );
     }
 
     &::after {
@@ -109,13 +110,14 @@
 
       height: 11em;
 
-      background-image: repeating-linear-gradient(
-        225deg,
-        $stripes-color,
-        $stripes-color 0.063em,
-        rgba(255, 255, 255, 0) 0.125em,
-        rgba(255, 255, 255, 0) 0.75em
-      );
+      background-image:
+        repeating-linear-gradient(
+          225deg,
+          $stripes-color,
+          $stripes-color 0.063em,
+          rgba(255, 255, 255, 0) 0.125em,
+          rgba(255, 255, 255, 0) 0.75em
+        );
     }
   }
 

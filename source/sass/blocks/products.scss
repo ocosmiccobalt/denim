@@ -66,11 +66,12 @@
   vertical-align: top;
   color: inherit;
 
-  background-image: linear-gradient(
-    to top,
-    $heavy-text-color 0.125em,
-    rgba(255, 255, 255, 0) 0.125em
-  );
+  background-image:
+    linear-gradient(
+      to top,
+      $heavy-text-color 0.125em,
+      rgba(255, 255, 255, 0) 0.125em
+    );
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: 100% 100%;
@@ -80,11 +81,12 @@
 
   &:hover,
   &:active {
-    background-image: linear-gradient(
-      to top,
-      $state-color 0.125em,
-      rgba(255, 255, 255, 0) 0.125em
-    );
+    background-image:
+      linear-gradient(
+        to top,
+        $state-color 0.125em,
+        rgba(255, 255, 255, 0) 0.125em
+      );
   }
 
   &:focus {
@@ -95,11 +97,12 @@
   }
 
   &:focus:not(:focus-visible) {
-    background-image: linear-gradient(
-      to top,
-      $state-color 0.125em,
-      rgba(255, 255, 255, 0) 0.125em
-    );
+    background-image:
+      linear-gradient(
+        to top,
+        $state-color 0.125em,
+        rgba(255, 255, 255, 0) 0.125em
+      );
 
     outline: none;
   }
