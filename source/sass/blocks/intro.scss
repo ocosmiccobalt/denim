@@ -315,8 +315,20 @@
   @supports (display: grid) {
     .intro__wrapper {
       display: grid;
-      grid-template-columns: [skip-start] minmax(0, 1fr) [skip-end inner-start] repeat(4, minmax(0, 1fr)) [inner-end hero-start] repeat(6, minmax(0, 1fr)) [hero-end socials-start] minmax(0, 1fr) [socials-end];
-      grid-template-rows: [skip-start inner-start hero-start socials-start] auto [skip-end inner-end hero-end socials-end];
+      grid-template-columns:
+        [skip-start]
+        minmax(0, 1fr)
+        [skip-end inner-start]
+        repeat(4, minmax(0, 1fr))
+        [inner-end hero-start]
+        repeat(6, minmax(0, 1fr))
+        [hero-end socials-start]
+        minmax(0, 1fr)
+        [socials-end];
+      grid-template-rows:
+        [skip-start inner-start hero-start socials-start]
+        auto
+        [skip-end inner-end hero-end socials-end];
     }
 
     .intro__skip {
