@@ -2,6 +2,8 @@
 @use "mixins" as *;
 
 .products {
+  max-width: 26em;
+  margin: 0 auto;
   padding-top: 3.375em;
   padding-bottom: 3.75em;
 
@@ -41,6 +43,7 @@
   padding: 0 0.938em;
 
   &--categories {
+    align-items: flex-start;
     margin-bottom: 1.438em;
   }
 
@@ -148,6 +151,8 @@
     display: flex;
     flex-wrap: wrap;
 
+    max-width: none;
+    margin: 0;
     padding: 0 3.9%;
     padding-top: 5.875em;
     padding-bottom: 3.125em;
