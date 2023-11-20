@@ -261,6 +261,8 @@
 
 @media (min-width: $desktop-width) {
   .products {
+    max-width: $desktop-width;
+    margin: 0 auto;
     padding-top: 7.563em;
     padding-right: 0;
     padding-bottom: 4.813em;
